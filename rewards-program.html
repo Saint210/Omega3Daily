@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>ZinoCash Rewards Program | Earn Points & Get Free Products | Omega3Daily</title>
+    <meta name="description" content="Join Omega3Daily's ZinoCash rewards program. Earn points on every purchase, get shipping costs back, and enjoy exclusive member benefits. Calculate your rewards today!">
+    <meta name="keywords" content="ZinoCash, Omega3Daily rewards, loyalty program, customer rewards, free products, shipping rewards">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ZinoCash Rewards Program | Omega3Daily">
+    <meta property="og:description" content="Earn rewards on every purchase and get free products with Omega3Daily's ZinoCash program.">
+    <meta property="og:image" content="https://omega3daily.com/assets/img/rewards-program.jpg">
+    <meta property="og:url" content="https://omega3daily.com/rewards-program">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ZinoCash Rewards Program | Omega3Daily">
+    <meta name="twitter:description" content="Earn rewards on every purchase and get free products with Omega3Daily's ZinoCash program.">
+    <meta name="twitter:image" content="https://omega3daily.com/assets/img/rewards-program.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://omega3daily.com/rewards-program">
+    
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2C7BE5;
+            --secondary-color: #00A9A5;
+            --accent-color: #F2CF2D;
+            --text-color: #2C3E50;
+            --light-bg: #f8f9fa;
+            --primary-blue-dark: #2C7BE5;
+            --primary-blue-light: #3498db;
+            --secondary-yellow: #F2CF2D;
+            --secondary-blue-dark: #2C3E50;
+            --neutral-light-gray: #f8f9fa;
+            --header-height: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll offset for anchor links */
+        section[id] {
+            scroll-margin-top: var(--header-height);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #2C3E50 0%, #3498db 100%);
+            padding: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-section h1 {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .hero-section p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-section .lead {
+            color: rgba(255,255,255,0.95);
+            font-size: 1.25rem;
+        }
+
+        .btn-sage-enhanced {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sage-enhanced:hover {
+            background-color: #008B87;
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        .text-deep-blue {
+            color: var(--secondary-blue-dark);
+        }
+
+        .gradient-text {
+            background: linear-gradient(45deg, var(--primary-blue-dark), var(--primary-blue-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Additional reward program styles */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e9ecef;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 45px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .calculator {
+            background: var(--light-bg);
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+        }
+        .faq-item {
+            border-bottom: 1px solid #e9ecef;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Breadcrumb styles */
+        .breadcrumb-wrapper {
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            background-color: var(--light-bg);
+        }
+
+        .breadcrumb {
+            margin: 0;
+            padding: 0.5rem 0;
+        }
+
+        .breadcrumb-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .breadcrumb-item a:hover {
+            color: var(--primary-blue-dark);
+        }
+
+        .breadcrumb-item.active {
+            color: var(--text-color);
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: "›";
+            color: var(--text-color);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            z-index: 1031;
+            transition: width 0.2s ease-out;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-blue-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Enhanced Mobile Menu Transitions */
+        .navbar-collapse {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-collapse.collapsing {
+            height: auto;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .navbar-collapse.show {
+            background: white;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 1rem;
+                border-radius: 0 0 15px 15px;
+                transform-origin: top;
+            }
+
+            .navbar-nav {
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .navbar-collapse.show .navbar-nav {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .nav-link {
+                padding: 0.5rem 1rem !important;
+                border-radius: 8px;
+                transition: all 0.2s ease;
+            }
+
+            .nav-link:hover {
+                background: var(--light-bg);
+            }
+        }
+    </style>
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LoyaltyProgram",
+      "name": "ZinoCash Rewards Program",
+      "description": "Earn rewards on every purchase with Omega3Daily's ZinoCash program. Get shipping costs back and 10% rewards on qualifying purchases.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Omega3Daily",
+        "url": "https://omega3daily.com"
+      },
+      "programName": "ZinoCash",
+      "membershipPointsEarned": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": "10.00"
+      },
+      "benefits": [
+        {
+          "@type": "Offer",
+          "name": "Shipping Rewards",
+          "description": "Get 100% of shipping costs back as ZinoCash"
+        },
+        {
+          "@type": "Offer",
+          "name": "Level 2 Rewards",
+          "description": "Earn 10% back in ZinoCash after 7th order"
+        },
+        {
+          "@type": "Offer",
+          "name": "Free Follow-up Test",
+          "description": "Track your progress after 120 days"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "When do I start earning ZinoCash?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You start earning ZinoCash from your very first order. Level 1 benefits (shipping rewards) are available immediately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I reach Level 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After completing 7 orders, you automatically unlock Level 2 and start earning 10% back in ZinoCash on all purchases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my ZinoCash expire?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, your ZinoCash never expires as long as you remain an active customer with at least one purchase every 12 months."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://omega3daily.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Rewards Program",
+          "item": "https://omega3daily.com/rewards-program"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img 
+                    src="assets/images/logo/omega-3-daily-logo.jpeg" 
+                    alt="Omega 3 Daily Logo" 
+                    style="max-height: 75px;"
+                />
+                <span class="ms-3 fw-bold text-dark">Omega3Daily</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="index.html">
+                        <i class="fas fa-home me-1"></i>Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Rewards Program</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Omega3Daily Rewards</h1>
+                    <p class="lead mb-4">Join our rewards program and earn ZinoCash on every purchase. Get shipping costs back, earn bonus rewards, and enjoy exclusive member benefits.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#calculator" class="btn btn-light px-4 rounded-pill">Calculate Your Rewards</a>
+                        <a href="#faq" class="btn btn-outline-light px-4 rounded-pill">View Common Questions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="text-center mb-5">How ZinoCash Works</h2>
+                    <div class="timeline">
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-dot">
+                                <i class="fas fa-coins text-primary"></i>
+                            </div>
+                            <h4>1. Earn ZinoCash</h4>
+                            <p class="text-muted">Start earning immediately with Level 1 benefits. Get 100% of shipping costs back as ZinoCash on every order.</p>
+                        </div>
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-dot">
+                                <i class="fas fa-level-up-alt text-primary"></i>
+                            </div>
+                            <h4>2. Reach Level 2</h4>
+                            <p class="text-muted">After your 7th order, unlock Level 2 benefits and start earning 10% back in ZinoCash on all purchases.</p>
+                        </div>
+                        <div class="timeline-item mb-4">
+                            <div class="timeline-dot">
+                                <i class="fas fa-shopping-cart text-primary"></i>
+                            </div>
+                            <h4>3. Shop with ZinoCash</h4>
+                            <p class="text-muted">Use your accumulated ZinoCash to get free products. Simply select "ZinoCash" as your payment method at checkout.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">
+                                <i class="fas fa-sync text-primary"></i>
+                            </div>
+                            <h4>4. Keep Earning</h4>
+                            <p class="text-muted">Your ZinoCash never expires as long as you remain an active customer. Keep earning and enjoying rewards!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="calculator p-4">
+                        <h3 class="text-center mb-4">ZinoCash Calculator</h3>
+                        <div class="mb-4">
+                            <label class="form-label">Order Amount ($)</label>
+                            <input type="number" class="form-control" id="orderAmount" value="75">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Shipping Cost ($)</label>
+                            <input type="number" class="form-control" id="shippingCost" value="7">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Reward Level</label>
+                            <select class="form-select" id="rewardLevel">
+                                <option value="1">Level 1 (Shipping Only)</option>
+                                <option value="2">Level 2 (Shipping + 10% Back)</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary px-4 rounded-pill" onclick="calculateRewards()">Calculate</button>
+                        </div>
+                        <div class="mt-4 p-3 bg-white rounded">
+                            <h5 class="text-center mb-3">Your Rewards</h5>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Shipping Reward:</span>
+                                <span id="shippingReward" class="text-success">$7.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Order Reward:</span>
+                                <span id="orderReward" class="text-success">$0.00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <span>Total ZinoCash:</span>
+                                <span id="totalReward" class="text-success">$7.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Rules -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Program Rules</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-coins fa-2x"></i>
+                            </div>
+                            <h4>Earning Rules</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Earn on every order</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Level 1: Shipping costs back</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Level 2: Additional 10% back</li>
+                                <li><i class="fas fa-check text-success me-2"></i>No minimum purchase</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-gift fa-2x"></i>
+                            </div>
+                            <h4>Redemption Rules</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Use for single items</li>
+                                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Not for subscriptions</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>No minimum redemption</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Combine with other offers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="text-primary mb-3">
+                                <i class="fas fa-clock fa-2x"></i>
+                            </div>
+                            <h4>Program Terms</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>No expiration for active customers</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Transferable to family</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Level 2 stays active</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Customer support available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <!-- Earning Questions -->
+                        <div class="card mb-3">
+                            <div class="card-header bg-white">
+                                <h3 class="h5 mb-0">Earning ZinoCash</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">When do I start earning ZinoCash?</h6>
+                                    <p class="text-muted mb-0">You start earning ZinoCash from your very first order. Level 1 benefits (shipping rewards) are available immediately.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">How do I reach Level 2?</h6>
+                                    <p class="text-muted mb-0">After completing 7 orders, you automatically unlock Level 2 and start earning 10% back in ZinoCash on all purchases.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">Do subscription orders count?</h6>
+                                    <p class="text-muted mb-0">Yes, all orders count towards your Level 2 qualification, including both one-time purchases and subscription orders.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Redemption Questions -->
+                        <div class="card mb-3">
+                            <div class="card-header bg-white">
+                                <h3 class="h5 mb-0">Redeeming ZinoCash</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">How do I use my ZinoCash?</h6>
+                                    <p class="text-muted mb-0">Simply add products to your cart and select "ZinoCash" as your payment method during checkout.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">Can I use ZinoCash for subscriptions?</h6>
+                                    <p class="text-muted mb-0">No, ZinoCash can only be used for single-item purchases, not for subscription orders.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">Is there a minimum redemption amount?</h6>
+                                    <p class="text-muted mb-0">No, you can redeem any amount of ZinoCash as long as you have enough to cover your purchase.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Account Questions -->
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h3 class="h5 mb-0">Account Management</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">Does my ZinoCash expire?</h6>
+                                    <p class="text-muted mb-0">No, your ZinoCash never expires as long as you remain an active customer with at least one purchase every 12 months.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">Can I transfer my ZinoCash?</h6>
+                                    <p class="text-muted mb-0">Yes, you can transfer your ZinoCash to family members who are also Omega3Daily customers.</p>
+                                </div>
+                                <div class="faq-item py-3">
+                                    <h6 class="mb-2">How do I check my ZinoCash balance?</h6>
+                                    <p class="text-muted mb-0">Log into your account dashboard to view your current ZinoCash balance and earning history.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Omega3Daily. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3">Terms & Conditions</a>
+                    <a href="#" class="text-light">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navbar scroll behavior
+            const navbar = document.querySelector('.navbar');
+            const progressBar = document.querySelector('.progress-bar');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            // Progress bar and back to top button
+            function updateScroll() {
+                // Calculate scroll progress
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+
+                // Toggle back to top button
+                if (winScroll > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+
+                // Navbar shadow
+                if (winScroll > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }
+
+            window.addEventListener('scroll', updateScroll);
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const headerHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = targetPosition - headerHeight - 20;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Enhanced mobile menu
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+
+            navbarToggler.addEventListener('click', function() {
+                // Add slide animation
+                if (!navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.style.display = 'block';
+                    setTimeout(() => {
+                        navbarCollapse.classList.add('show');
+                    }, 10);
+                } else {
+                    navbarCollapse.classList.remove('show');
+                    setTimeout(() => {
+                        navbarCollapse.style.display = 'none';
+                    }, 300);
+                }
+            });
+
+            // Close mobile menu on click outside
+            document.addEventListener('click', function(e) {
+                if (!navbar.contains(e.target) && navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            });
+        });
+    </script>
+    <script>
+        function calculateRewards() {
+            const orderAmount = parseFloat(document.getElementById('orderAmount').value) || 0;
+            const shippingCost = parseFloat(document.getElementById('shippingCost').value) || 0;
+            const rewardLevel = document.getElementById('rewardLevel').value;
+
+            // Calculate shipping reward
+            const shippingReward = shippingCost;
+            
+            // Calculate order reward
+            const orderReward = rewardLevel === '2' ? orderAmount * 0.10 : 0;
+            
+            // Calculate total reward
+            const totalReward = shippingReward + orderReward;
+
+            // Update display
+            document.getElementById('shippingReward').textContent = `$${shippingReward.toFixed(2)}`;
+            document.getElementById('orderReward').textContent = `$${orderReward.toFixed(2)}`;
+            document.getElementById('totalReward').textContent = `$${totalReward.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

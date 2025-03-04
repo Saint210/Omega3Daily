@@ -1,0 +1,838 @@
+F<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zinzino BalanceOil+ | Premium Omega-3 Supplements</title>
+    <meta name="description" content="Experience the power of Zinzino BalanceOil+. Our premium omega-3 supplement helps restore and maintain your optimal omega-6:3 balance naturally and effectively.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2C7BE5;
+            --secondary-color: #00A9A5;
+            --accent-color: #F2CF2D;
+            --text-color: #2C3E50;
+            --light-bg: #f8f9fa;
+            --primary-blue-dark: #2C7BE5;
+            --primary-blue-light: #3498db;
+            --secondary-yellow: #F2CF2D;
+            --secondary-blue-dark: #2C3E50;
+            --neutral-light-gray: #f8f9fa;
+            --header-height: 100px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            z-index: 1031;
+            transition: width 0.2s ease-out;
+        }
+
+        /* Enhanced Mobile Menu */
+        .navbar-collapse {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-collapse.collapsing {
+            height: auto;
+            transition: all 0.3s ease-in-out;
+            overflow: hidden;
+        }
+
+        .navbar-collapse.show {
+            background: white;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 1rem;
+                border-radius: 0 0 15px 15px;
+                transform-origin: top;
+            }
+
+            .navbar-nav {
+                opacity: 0;
+                transform: translateY(-10px);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .navbar-collapse.show .navbar-nav {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-item {
+                margin: 0.5rem 0;
+            }
+
+            .nav-link {
+                padding: 0.5rem 1rem !important;
+                border-radius: 8px;
+                transition: all 0.2s ease;
+            }
+
+            .nav-link:hover {
+                background: var(--light-bg);
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--secondary-blue-dark) 0%, var(--primary-blue-light) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 6rem 0;
+            color: white;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="%23ffffff10"/></svg>') repeat;
+            opacity: 0.1;
+        }
+
+        .gradient-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        /* Cards and Sections */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 1rem;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            background: rgba(44, 123, 229, 0.1);
+        }
+
+        .bg-primary-soft {
+            background-color: rgba(44, 123, 229, 0.1);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        /* Product Cards */
+        .product-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+
+        .product-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Section Styles */
+        section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-connector {
+            position: relative;
+        }
+
+        .section-connector::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            opacity: 0.1;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .display-4 {
+            font-weight: 800;
+        }
+
+        .lead {
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+        }
+
+        .btn-light {
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+        }
+
+        .btn-light:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-light {
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+        }
+
+        /* Partner Badge */
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .partner-badge i {
+            color: var(--accent-color);
+        }
+
+        /* Stats Highlight */
+        .stats-highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm sticky-top">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img 
+                        src="images/Omega 3 Daily temp logo.jpg" 
+                        alt="Omega 3 Daily Logo" 
+                        class="img-fluid me-3" 
+                        style="max-height: 90px; border-radius: 14px; object-fit: contain;"
+                    >
+                    <span class="d-none d-md-inline text-deep-blue fw-bold fs-4 gradient-text">Omega 3 Daily</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#science">Science</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#challenge">Challenge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#pricing">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-sage-enhanced px-3 py-2 ms-2" href="#products">Order Now</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var navbar = document.querySelector('.navbar');
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+            });
+        </script>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <section class="hero-section position-relative overflow-hidden py-5" style="background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);">
+        <div class="gradient-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="partner-badge">
+                        <i class="fas fa-check-circle me-2"></i> Zinzino Independent Partner
+                    </span>
+                    <div class="mb-4">
+                        <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 fade-in-up">Premium Quality</span>
+                        <h1 class="display-4 fw-bold mb-4 fade-in-up">Transform Your Health with BalanceOil+</h1>
+                        <p class="lead mb-4 text-white-50 fade-in-up">Experience the power of premium omega-3 supplements designed to restore and maintain your optimal omega-6:3 balance naturally and effectively.</p>
+                    </div>
+                    <div class="stats-highlight rounded-4 p-4 mb-4 fade-in-up">
+                        <div class="row g-3">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <span class="stat-number">98%</span>
+                                    <small class="text-white-50">Success Rate</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <span class="stat-number">120</span>
+                                    <small class="text-white-50">Day Program</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <span class="stat-number">1M+</span>
+                                    <small class="text-white-50">Happy Users</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3 fade-in-up">
+                        <a href="#products" class="btn btn-light btn-lg px-4">Explore Products</a>
+                        <a href="balance-test.html" class="btn btn-outline-light btn-lg px-4">Take the Test</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center">
+                        <img src="images/ZinzinoBalanceOil.png" alt="Zinzino BalanceOil+" class="img-fluid fade-in-up" style="max-width: 80%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold">Why Choose BalanceOil+?</h2>
+                <p class="lead text-muted">Scientifically proven benefits for your overall health and well-being</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-heart text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Heart Health</h3>
+                            </div>
+                            <p class="text-muted mb-0">Supports cardiovascular function and maintains healthy blood lipid levels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-brain text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Brain Function</h3>
+                            </div>
+                            <p class="text-muted mb-0">Enhances cognitive performance and supports mental clarity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-shield-alt text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Immune Support</h3>
+                            </div>
+                            <p class="text-muted mb-0">Strengthens your immune system and promotes overall wellness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Why We're Different</span>
+                    <h2 class="display-5 fw-bold mb-4">Not All Omega-3s Are Created Equal</h2>
+                    <p class="lead mb-4">Discover why Zinzino BalanceOil+ stands out in a crowded market of omega-3 supplements.</p>
+                    
+                    <div class="mb-4">
+                        <h4 class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Scientifically Proven Results</h4>
+                        <p class="text-muted">Unlike other supplements, we don't just claim it works - we prove it. Our Balance Test shows your individualized "Before and After" BalanceTest results, demonstrating real results in just 120 days.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Polyphenol Protection</h4>
+                        <p class="text-muted">Our unique blend includes extra virgin olive oil rich in polyphenols that protect the omega-3s from oxidation, ensuring maximum bioavailability and effectiveness.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h4 class="mb-3"><i class="fas fa-check-circle text-success me-2"></i>Optimal Ratio Achievement</h4>
+                        <p class="text-muted">While most supplements focus only on omega-3 content, BalanceOil+ is specifically designed to achieve the optimal 3:1 omega-6:3 ratio for peak health benefits.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/Omega-3-oil-Brand-Comparison.jpg" alt="BalanceOil+ Comparison" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Supplement Facts Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">Supplement Facts</h2>
+                <p class="lead text-muted mb-4">Each serving of BalanceOil+ is carefully formulated to provide optimal nutrition with premium ingredients:</p>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-3">
+                        <i class="fas fa-check text-primary me-2"></i>
+                        <strong>2500mg Omega-3 Fatty Acids</strong> - Including EPA and DHA for heart and brain health
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-check text-primary me-2"></i>
+                        <strong>4262mg Premium Olive Oil</strong> - Rich in heart-healthy oleic acid and polyphenols
+                    </li>
+                    <li class="mb-3">
+                        <i class="fas fa-check text-primary me-2"></i>
+                        <strong>20mcg Vitamin D3</strong> - 100% of your daily value for immune support
+                    </li>
+                </ul>
+                <p class="text-muted small">* Percent daily values are based on a 2,000 calorie diet.</p>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img 
+                        src="images/Zinzino-BalanceOil-plus-US-ingredients-table.png" 
+                        alt="BalanceOil+ Supplement Facts" 
+                        class="img-fluid rounded-4 shadow-lg"
+                        style="max-width: 500px;"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Premier Offers Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Premier Offers</span>
+                <h2 class="display-5 fw-bold mb-4">Choose Your Perfect Balance Kit</h2>
+                <p class="lead text-muted">Start your journey to optimal health with our specially designed kits</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <h3 class="h4">BalanceOil+ Kit</h3>
+                                <p class="text-muted mb-3">Single Bottle</p>
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <h4 class="display-6 mb-0 me-2">$42</h4>
+                                    <span class="text-decoration-line-through text-muted">$60</span>
+                                </div>
+                                <span class="badge bg-danger">Save 30%</span>
+                            </div>
+                            <div class="mb-4">
+                                <p class="mb-4">Premium blend containing natural fish oil, high in Omega 3 (EPA + DHA), olive polyphenols and vitamin D3 to protect cells from oxidation and maintain optimal health.</p>
+                                
+                                <h5 class="mb-3">Key Benefits:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>High in Omega-3 (EPA + DHA)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Olive polyphenols</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Vitamin D3</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Protects cells from oxidation</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Supports brain function</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Supports heart health</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Strengthens immune system</li>
+                                </ul>
+
+                                <h5 class="mb-3">Subscribe & Save:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Monthly delivery: $42</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Save 30% off retail</li>
+                                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i>Earn 4.00 credits monthly</li>
+                                </ul>
+                            </div>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910074" class="btn btn-outline-primary w-100" target="_blank" rel="noopener">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3">
+                    <div class="card h-100 border-0 shadow-lg hover-card" style="transform: translateY(-10px);">
+                        <div class="card-body p-4">
+                            <div class="position-absolute top-0 start-50 translate-middle">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill">Best Seller</span>
+                            </div>
+                            <div class="text-center mb-4">
+                                <h3 class="h4">Balance Test Basic Kit</h3>
+                                <p class="text-muted mb-3">Omega 6:3 BalanceTest</p>
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <h4 class="display-6 mb-0 me-2">$109</h4>
+                                    <span class="text-decoration-line-through text-muted">$400</span>
+                                </div>
+                                <span class="badge bg-danger">Save 73%</span>
+                            </div>
+                            <div class="mb-4">
+                                <p class="mb-4">This at-home test provides a comprehensive look at your body's Omega 6:3 balance. See your individualized "Before and After" BalanceTest results, then use Zinzino BalanceOil to adjust and maintain your optimal balance.</p>
+                                
+                                <h5 class="mb-3">Special Offer Includes:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Save $76 on BalanceTest ($170 retail)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>First month BalanceOil FREE ($60 value)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>FREE follow-up Test at 120 days ($170 value)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Total Savings: $201</li>
+                                </ul>
+
+                                <h5 class="mb-3">Kit Benefits:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>High in Omega-3 (EPA + DHA)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Olive polyphenols</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Vitamin D3</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Protects cells from oxidation</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Supports brain & heart function</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Strengthens immune system</li>
+                                </ul>
+
+                                <div class="alert alert-warning" role="alert">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>Please Note: BalanceTest is not available in New York.
+                                </div>
+                            </div>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910465" class="btn btn-primary w-100" id="best-seller-package" target="_blank" rel="noopener">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <h3 class="h4">BalanceOil+ Kit with Test</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <h4 class="display-6 mb-0 me-2">$189</h4>
+                                    <span class="text-decoration-line-through text-muted">$508</span>
+                                </div>
+                                <span class="badge bg-danger">Save 63%</span>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="mb-3">Kit Content:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>High in Omega-3 (EPA + DHA)</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Olive polyphenols</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Vitamin D3</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 Balance Test Kits</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Before & After Testing</li>
+                                </ul>
+                                <h5 class="mb-3">Monthly Subscription:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>BalanceOil 1 pc/month</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Monthly fee: $42 (Save 30%)</li>
+                                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i>Earn 14.00 credits</li>
+                                </ul>
+                            </div>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910352" class="btn btn-outline-primary w-100">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-4">
+                                <h3 class="h4">BalanceOil+ Premium Kit with Test</h3>
+                                <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                                    <h4 class="display-6 mb-0 me-2">$219</h4>
+                                    <span class="text-decoration-line-through text-muted">$564</span>
+                                </div>
+                                <span class="badge bg-danger">Save 61%</span>
+                            </div>
+                            <div class="mb-4">
+                                <h5 class="mb-3">Kit Content:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>4x Higher Polyphenolic Content</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Premium Formula</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>2 Balance Test Kits</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Enhanced Protection</li>
+                                </ul>
+                                <h5 class="mb-3">Monthly Subscription:</h5>
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>BalanceOil Premium 1 pc/month</li>
+                                    <li class="mb-3"><i class="fas fa-check text-success me-2"></i>Monthly fee: $62 (Save 30%)</li>
+                                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i>Earn 16.00 credits</li>
+                                </ul>
+                            </div>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910527" class="btn btn-outline-primary w-100">Choose Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted mb-4">* All kits include scientific result analysis and personalized health reports</p>
+                <div class="mt-4">
+                    <h5 class="mb-3">Looking for Special Formulations?</h5>
+                    <div class="d-flex justify-content-center gap-3 flex-wrap">
+                        <a href="aquax.html" class="btn btn-outline-primary">View AquaX (Water Soluble)</a>
+                        <a href="balance-oil.html" class="btn btn-outline-primary">View Vegan Options</a>
+                        <a href="#" class="btn btn-outline-primary">View Essent+ Premium</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">Why Join Our "Subscribe & Save" Program?</h2>
+                <p class="lead text-muted">Put your health on auto-pilot while saving time and money</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-percentage text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Save 40%</h3>
+                            </div>
+                            <p class="text-muted mb-0">Get convenient monthly deliveries at a significant discount off retail price.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-gift text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Earn Rewards</h3>
+                            </div>
+                            <p class="text-muted mb-0">Get $10 in Product Perks every month plus access to exclusive special offers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm hover-card">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-4">
+                                <div class="icon-circle bg-primary-soft">
+                                    <i class="fas fa-calendar-check text-primary fa-2x"></i>
+                                </div>
+                                <h3 class="h5 mb-0">Flexible Terms</h3>
+                            </div>
+                            <p class="text-muted mb-0">No commitment or fees. Cancel anytime, hassle-free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted mb-4">* Balance Test kit subscribers receive a FREE follow-up test in month five</p>
+                <div class="mt-4">
+                    <p class="mb-3">Need support? Contact our Customer Care team:</p>
+                    <p class="mb-2"><i class="fas fa-phone me-2"></i><a href="tel:+15612031767">+1 (561) 203-1767</a></p>
+                    <p class="mb-0"><small>To modify or cancel your monthly order, contact us at least two business days before your next delivery.</small></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/AquaX/zinzino-balance-oil-aquax.jpg" alt="Balance Test Kit" class="img-fluid rounded-4 mb-4 mb-lg-0">
+                </div>
+                <div class="col-lg-6">
+                    <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3">Start Your Journey</span>
+                    <h2 class="display-5 fw-bold mb-4">120-Day Challenge: Prove It Works</h2>
+                    <p class="lead mb-4">Take control of your health with our scientifically proven Balance Test and premium BalanceOil+.</p>
+                    
+                    <div class="bg-white text-dark p-4 rounded-4 mb-4">
+                        <h4 class="mb-3">Ready to Transform Your Health?</h4>
+                        <p class="mb-3">Get started with our best-selling package:</p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>High in Omega-3 (EPA + DHA)</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Balance Test Kit Included</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Scientific Result Analysis</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Monthly BalanceOil Supply</li>
+                            <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Earn 8.00 Credits</li>
+                        </ul>
+                        <div class="d-flex align-items-center mb-3">
+                            <h3 class="mb-0 me-3">$109</h3>
+                            <span class="text-decoration-line-through text-muted">$400</span>
+                            <span class="badge bg-danger ms-3">Save 73%</span>
+                        </div>
+                        <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910465" class="btn btn-primary btn-lg w-100" target="_blank" rel="noopener">Start Your Journey Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="mb-4">About BalanceOil+</h5>
+                    <p class="text-muted mb-4">Premium omega-3 supplements designed to optimize your omega-6:3 ratio and support overall health and well-being.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#products" class="text-muted text-decoration-none">Products</a></li>
+                        <li class="mb-2"><a href="#science" class="text-muted text-decoration-none">Science</a></li>
+                        <li class="mb-2"><a href="balance-test.html" class="text-muted text-decoration-none">Balance Test</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Contact Us</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> support@omega3daily.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> 1-800-OMEGA-3D</li>
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Health Street, Wellness City</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p class="text-muted mb-4">Subscribe to our newsletter for health tips and product updates.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-muted mb-0">&copy; 2025 Omega3 Daily. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                        <li class="list-inline-item mx-3">|</li>
+                        <li class="list-inline-item"><a href="#" class="text-muted text-decoration-none">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

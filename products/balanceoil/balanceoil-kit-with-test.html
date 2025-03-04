@@ -1,0 +1,2858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BalanceOil+ Kit with Test | Omega3Daily</title>
+    <meta name="description" content="Support optimal heart, brain, and immune function with our bestselling BalanceOil+ Kit with Test. Get personalized Omega-3 supplementation based on your unique fatty acid profile.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/product-detail.css">
+    <link rel="stylesheet" href="/assets/css/typography.css">
+
+    <style>
+        /* Base styles and variables */
+        :root {
+            --primary-color: #00A9A5;
+            --primary-color-dark: #008784;
+            --secondary-color: #2C7BE5;
+            --accent-color: #F2CF2D;
+            --text-color: #2C3E50;
+            --text-muted: #6B7280;
+            --heading-color: #1F2937;
+            --light-bg: #f8f9fa;
+            --gradient-start: var(--primary-color);
+            --gradient-end: var(--secondary-color);
+            --header-height: 4rem;
+            --nav-text: var(--text-color);
+            --nav-text-hover: var(--primary-color);
+        }
+
+        /* Global utility classes */
+        .text-readable {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .text-readable--small {
+            font-size: 0.925rem;
+            line-height: 1.5;
+            color: var(--text-color);
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .text-accent {
+            color: var(--accent-color);
+        }
+
+        .bg-gradient-light {
+            background: linear-gradient(135deg, var(--light-bg) 0%, #ffffff 100%);
+        }
+
+        /* Backdrop filter styles */
+        .navbar-blur,
+        .mobile-menu {
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Button base styles */
+        .btn-base {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+
+        .btn-base:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-color-dark);
+        }
+
+        :root {
+            --primary-color: #00A9A5;
+            --secondary-color: #2C7BE5;
+            --accent-color: #F2CF2D;
+            --gradient-start: #00A9A5;
+            --gradient-end: #2C7BE5;
+            --text-color: #2C3E50;
+            --light-bg: #f8f9fa;
+            --header-height: 130px;
+            --nav-text: #2C3E50;
+            --nav-text-hover: #00A9A5;
+        }
+
+        /* Navigation and Hero Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 0.75rem 0;
+            height: var(--header-height);
+        }
+
+        .navbar-brand {
+            padding: 0.5rem 0;
+        }
+
+        .navbar-brand img {
+            height: 110px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--nav-text) !important;
+            position: relative;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--nav-text-hover) !important;
+        }
+
+        .nav-link:hover::after {
+            width: 80%;
+        }
+
+        .product-hero {
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 0;
+            margin-top: var(--header-height) !important;
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            align-items: center;
+        }
+
+        .product-hero__content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .product-hero__text {
+            color: white;
+            padding-right: 2rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1.5rem 0;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @media (max-width: 991.98px) {
+            .product-hero {
+                padding: 2rem 0;
+                min-height: auto;
+            }
+
+            .product-hero__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-hero__text {
+                padding-right: 0;
+            }
+        }
+
+        /* Product Pricing Section */
+        .product-pricing {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .kit-contents {
+            background: #f8f9fa;
+            border-radius: 1rem;
+            padding: 1.5rem;
+        }
+
+        .kit-contents h3 {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .kit-contents h3 i {
+            color: var(--primary-color);
+        }
+
+        .kit-items {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .kit-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .kit-item-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(0,169,165,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            flex-shrink: 0;
+            font-size: 0.9rem;
+        }
+
+        .kit-item-content h4 {
+            font-size: 0.95rem;
+            color: var(--heading-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .kit-item-content p {
+            font-size: 0.85rem;
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .subscription-benefits {
+            background: #f8f9fa;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-top: 1rem;
+        }
+
+        .subscription-benefits h3 {
+            font-size: 1.3rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .benefit-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(0,169,165,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        .benefit-content {
+            flex: 1;
+        }
+
+        .benefit-content h4 {
+            font-size: 1rem;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-content p {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .subscription-cta {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            color: var(--heading-color);
+            font-weight: 500;
+        }
+
+        .contact-info {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 991.98px) {
+            .pricing-row {
+                grid-template-columns: 1fr;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .original-price {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: line-through;
+            font-size: 1.1rem;
+        }
+
+        .current-price {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .savings-badge {
+            background: #F2CF2D;
+            color: #2C3E50;
+            padding: 0.4rem 0.8rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 200px;
+        }
+
+        .btn-primary {
+            background: #F2CF2D;
+            color: #2C3E50;
+            border: none;
+            box-shadow: 0 4px 15px rgba(242, 207, 45, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #f4d542;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(242, 207, 45, 0.4);
+            color: #2C3E50;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        .product-hero__image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-hero__image img {
+            max-width: 100%;
+            height: auto;
+            transform: perspective(1000px) rotateY(-15deg);
+            transition: transform 0.5s ease;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2));
+        }
+
+        .notice {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .notice i {
+            color: #F2CF2D;
+        }
+
+        /* Key Benefits Section */
+        .key-benefits {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .key-benefits__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .key-benefits__header h2 {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .key-benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .benefit-card__icon {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-card__icon i {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .benefit-card__content {
+            color: var(--text-color);
+        }
+
+        .disclaimer {
+            background: rgba(0,0,0,0.02);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Ingredients Section */
+        .ingredients {
+            padding: 5rem 0;
+            background: #ffffff;
+        }
+
+        .ingredients__header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ingredients__header h2 {
+            color: var(--text-color);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .ingredients__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .ingredients__list {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .ingredients__list h3 {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients__main {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .flavors {
+            background: rgba(0,169,165,0.05);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .flavors__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .flavors__list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        .flavors__list li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0.5rem;
+        }
+
+        .ingredients__notice {
+            margin-top: 1rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        .ingredients__table {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .ingredients__table img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Ingredients Details Section */
+        .ingredients-details {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .ingredients-details .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .ingredients-details__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .ingredients-details__header h2 {
+            color: var(--text-color);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .ingredients-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .ingredient-card {
+            background: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .ingredient-card__header {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            padding: 1rem 1.25rem;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .ingredient-card__header-content {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .ingredient-card__icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ingredient-card__icon i {
+            font-size: 1rem;
+            color: white;
+        }
+
+        .ingredient-card__header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .ingredient-card__toggle {
+            transition: transform 0.3s ease;
+        }
+
+        .ingredient-card.active .ingredient-card__toggle {
+            transform: rotate(180deg);
+        }
+
+        .ingredient-card.active .ingredient-card__content {
+            display: block;
+        }
+
+        .ingredient-card__content {
+            padding: 1.25rem;
+            display: none;
+            color: var(--text-color);
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .ingredient-card__content p {
+            margin-bottom: 0.75rem;
+        }
+
+        .ingredient-card__content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .proof-section {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .proof-section h3 {
+            color: var(--text-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .proof-section p {
+            color: var(--text-color);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .proof-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* How to Use Section */
+        .how-to-use {
+            padding: 4rem 0;
+            background: #ffffff;
+        }
+
+        .how-to-use .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .how-to-use__header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .how-to-use__header h2 {
+            color: var(--text-color);
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .usage-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .usage-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .usage-card__header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .usage-card__icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .usage-card__icon i {
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .usage-card__title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .usage-card__content {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .dosage-table {
+            width: 100%;
+            margin: 1rem 0;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .dosage-table th,
+        .dosage-table td {
+            padding: 0.5rem;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .dosage-table th {
+            background: rgba(0,169,165,0.1);
+            font-weight: 600;
+        }
+
+        @media (max-width: 991.98px) {
+            .ingredients-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .ingredients-details {
+                padding: 3rem 0;
+            }
+
+            .ingredients-details .container {
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .product-hero {
+                padding: 2rem 0;
+            }
+
+            .product-hero__content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .product-hero__text {
+                padding-right: 0;
+            }
+
+            .product-actions {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .price-container {
+                justify-content: center;
+            }
+
+            .key-benefits__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ingredients__content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .ingredients__table {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .ingredients-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .key-benefits__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .usage-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        /* Video Section */
+        .video-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #005c5a 100%);
+            color: white;
+        }
+
+        .video-text h2 {
+            color: white;
+        }
+
+        .video-text p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .video-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .video-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .video-text {
+            padding-right: 2rem;
+        }
+
+        .video-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            color: var(--heading-color);
+        }
+
+        .video-text h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin-top: 1rem;
+        }
+
+        .video-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 991.98px) {
+            .video-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .video-text {
+                padding-right: 0;
+            }
+
+            .video-text h2::after {
+                margin: 1rem auto 0;
+            }
+
+            .video-container {
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .video-section {
+                padding: 3rem 0;
+            }
+
+            .video-text h2 {
+                font-size: 2rem;
+            }
+
+            .video-container {
+                padding: 0 1rem;
+            }
+        }
+
+        .download-section {
+            background: var(--light-bg);
+            padding: 4rem 0;
+            margin: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,169,165,0.1) 0%, rgba(44,123,229,0.1) 100%);
+            z-index: 1;
+        }
+
+        .download-section .container {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .download-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--heading-color);
+        }
+
+        .download-section p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 1.25rem 2.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            margin: 0 auto;
+        }
+
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: var(--primary-color-dark);
+        }
+
+        .download-description {
+            color: var(--text-muted);
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .download-description span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .download-description i {
+            font-size: 1rem;
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 767.98px) {
+            .download-section {
+                padding: 3rem 1rem;
+            }
+
+            .download-section h3 {
+                font-size: 1.75rem;
+            }
+
+            .download-section p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .download-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+                width: calc(100% - 2rem);
+                justify-content: center;
+            }
+
+            .download-description {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        .product-overview {
+            padding: 6rem 0;
+            background: #ffffff;
+        }
+
+        .overview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .overview-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--heading-color);
+            line-height: 1.2;
+        }
+
+        .overview-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+        }
+
+        .key-benefits {
+            margin-bottom: 3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .benefit-text {
+            flex: 1;
+        }
+
+        .benefit-text h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--heading-color);
+        }
+
+        .benefit-text p {
+            font-size: 1rem;
+            margin-bottom: 0;
+            color: var(--text-color);
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 2rem;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .pricing-title {
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-amount {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .original-price {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin: 0.75rem 0;
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .pricing-features {
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+            color: var(--text-color);
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .pricing-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,169,165,0.2);
+        }
+
+        .satisfaction-guarantee {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(0,169,165,0.1);
+            border-radius: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .guarantee-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .guarantee-text {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            line-height: 1.4;
+        }
+
+        .original-price {
+            color: #6c757d;
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .savings-badge {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            background: #F2CF2D;
+            color: #000;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: rotate(3deg);
+        }
+
+        .subscription-info {
+            background: rgba(0,169,165,0.05);
+            border: 1px solid rgba(0,169,165,0.1);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+
+        .subscription-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .subscription-header h3 {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .subscription-header .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .subscription-header .original {
+            color: #6c757d;
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin-left: 0.5rem;
+        }
+
+        .subscription-header .period {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.25rem;
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+
+        .benefit-item i {
+            color: var(--primary-color);
+            font-size: 1rem;
+        }
+
+        .subscription-cta {
+            text-align: center;
+            margin: 1.5rem 0;
+            font-weight: 500;
+            color: var(--heading-color);
+        }
+
+        .subscription-note {
+            font-size: 0.85rem;
+            color: #6c757d;
+            line-height: 1.5;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .subscription-note a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .subscription-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767.98px) {
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .subscribe-section {
+            background: linear-gradient(135deg, rgba(0,169,165,0.03) 0%, rgba(44,123,229,0.03) 100%);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            margin-top: 4rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .subscribe-header {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .subscribe-header h2 {
+            font-size: 2rem;
+            color: var(--heading-color);
+            margin-bottom: 1rem;
+        }
+
+        .subscribe-header p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .subscribe-price {
+            display: inline-flex;
+            align-items: baseline;
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .subscribe-price .amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .subscribe-price .original {
+            color: #6c757d;
+            text-decoration: line-through;
+            font-size: 1.2rem;
+            margin: 0 1rem;
+        }
+
+        .subscribe-price .period {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(0,169,165,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .benefit-item h4 {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+            margin-bottom: 0.75rem;
+        }
+
+        .benefit-item p {
+            font-size: 1rem;
+            color: var(--text-color);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .subscribe-cta {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .subscribe-button {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2C7BE5 100%);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1.25rem 3rem;
+            border-radius: 3rem;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .subscribe-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,169,165,0.2);
+        }
+
+        .support-info {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .support-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .support-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 991.98px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .subscribe-section {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .subscribe-header h2 {
+                font-size: 1.75rem;
+            }
+            .subscribe-price .amount {
+                font-size: 2rem;
+            }
+        }
+
+        .product-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2.5rem;
+        }
+
+        .main-content {
+            background: white;
+            border-radius: 1.5rem;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .product-description {
+            font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
+            line-height: 1.6;
+            max-width: 65ch;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            background: rgba(0,169,165,0.03);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: transform 0.2s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(0,169,165,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-icon i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .benefit-title {
+            font-size: clamp(1.1rem, 1rem + 0.25vw, 1.3rem);
+            line-height: 1.3;
+            margin: 1rem 0;
+            color: var(--heading-color);
+        }
+
+        .benefit-text {
+            font-size: clamp(0.95rem, 0.9rem + 0.25vw, 1.1rem);
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 65ch;
+        }
+
+        .benefit-highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .price-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .original-price {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .savings-badge {
+            background: rgba(0,169,165,0.1);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .credits-info {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .add-to-cart-btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2C7BE5 100%);
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .add-to-cart-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,169,165,0.2);
+        }
+
+        .kit-contents {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .kit-contents h3 {
+            font-size: 1.2rem;
+            color: var(--heading-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .kit-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .kit-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .kit-list li i {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .product-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .price-card, .kit-contents {
+                flex: 1;
+                min-width: 300px;
+            }
+
+            .price-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .product-container {
+                padding: 1rem;
+            }
+
+            .main-content {
+                padding: 2rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+        }
+
+        .benefits-section {
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .benefits-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                rgba(0,169,165,0) 0%, 
+                rgba(0,169,165,0.2) 50%, 
+                rgba(0,169,165,0) 100%);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            background: white;
+            border: 1px solid rgba(0,169,165,0.1);
+            border-radius: 1.25rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, 
+                rgba(0,169,165,0.1) 0%, 
+                rgba(44,123,229,0.1) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            margin: 0;
+        }
+
+        .benefit-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(0,169,165,0.1);
+            padding-top: 1.25rem;
+            margin: 0;
+        }
+    </style>
+    <style>
+        /* Card and benefit styles */
+        .card-base {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        /* Benefits grid layout */
+        .benefits-grid,
+        .benefit-overview-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            max-width: 1280px;
+        }
+
+        .benefit-overview-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Benefit icons */
+        .benefit-icon,
+        .benefit-card__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: transform 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .hover-lift:hover .benefit-icon,
+        .hover-lift:hover .benefit-card__icon {
+            transform: scale(1.1);
+        }
+
+        /* Trust badges */
+        .trust-item {
+            text-align: center;
+        }
+
+        .trust-item i {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 0.25rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .benefits-grid,
+            .benefit-overview-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .card-base {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+    <style>
+        /* Benefit overview styles */
+        .benefit-overview-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-icon i {
+            font-size: 1.25rem;
+        }
+
+        .benefit-overview-item .text-primary {
+            color: var(--primary-color);
+        }
+
+        .benefit-overview-item .text-accent {
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="/assets/images/logo/omega-3-daily-logo.jpeg" alt="Omega3Daily Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#how-it-works">How It Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/#faq">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- H<!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-gray-600 hover:text-gray-900">
+                        <span class="sr-only">Back</span>
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-sm text-gray-500">Need Help? 1-800-OMEGA3D</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <!-- Left Column: Product Image -->
+                <div class="relative mb-12 lg:mb-0">
+                    <div class="relative">
+                        <img 
+                            src="/assets/images/products/balanceoil/kit-with-test-hero.png"
+                            alt="BalanceOil+ Kit with Test"
+                            class="w-full rounded-lg shadow-lg"
+                        >
+                        <div class="absolute -bottom-4 -right-4 bg-blue-50 text-blue-800 px-4 py-2 rounded-full text-sm font-medium shadow-sm">
+                            Clinically Validated
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial Card -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md max-w-[280px]">
+                        <div class="flex items-start space-x-4">
+                            <img src="/assets/images/testimonials/sarah.jpg" class="w-12 h-12 rounded-full" alt="Sarah">
+                            <div>
+                                <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                                <p class="text-sm text-gray-800 mt-1">"My Omega-3 levels improved significantly in just 4 months!"</p>
+                                <span class="text-xs text-gray-500">Sarah M. - Verified Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="space-y-8">
+                    <!-- Header -->
+                    <div class="space-y-4">
+                        <h1 class="text-4xl font-light text-gray-900 leading-tight">
+                            <span class="block font-medium">BalanceOil+</span>
+                            <span class="block">Personalized Omega-3 Kit</span>
+                        </h1>
+                        <p class="text-lg text-gray-600">
+                            Advanced nutritional science meets personalized wellness. Discover your optimal Omega-3 balance with our comprehensive testing kit and premium oil formula.
+                        </p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm text-gray-600">4-Month Supply</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                </svg>
+                            </div>
+                            <span class="text-sm text-gray-600">Includes Test Kit</span>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6 py-6 border-t border-b border-gray-100">
+                        <div>
+                            <div class="text-2xl font-medium text-blue-600">98%</div>
+                            <div class="text-sm text-gray-600">Absorption Rate</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-medium text-blue-600">30K+</div>
+                            <div class="text-sm text-gray-600">Users Worldwide</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-medium text-blue-600">12+</div>
+                            <div class="text-sm text-gray-600">Clinical Studies</div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing and CTA -->
+                    <div class="space-y-6">
+                        <div id="zinzino-partner-container"></div>
+                        <button class="w-full bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center space-x-2">
+                            <span>Get Your Personalized Kit</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex items-center space-x-6">
+                        <img src="/assets/images/badges/fda-registered.png" alt="FDA Registered" class="h-12 opacity-75">
+                        <img src="/assets/images/badges/gmp-certified.png" alt="GMP Certified" class="h-12 opacity-75">
+                        <img src="/assets/images/badges/money-back.png" alt="90-Day Guarantee" class="h-12 opacity-75">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Value Proposition Section -->
+    <section class="value-proposition py-8 bg-gradient-to-b from-white to-gray-50">
+        <div class="container content-container px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl font-medium mb-3">Your Complete Omega-3 Transformation Journey</h2>
+                    <p class="text-gray-600">Experience the science-backed path to optimal health with our most comprehensive kit</p>
+                </div>
+
+                <!-- Kit Value Breakdown -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-box-open text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium mb-2">4-Month Premium Kit</h3>
+                                <p class="text-sm text-gray-600 mb-3">Everything you need for your wellness transformation</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">2x BalanceOil+ (300ml)</strong>
+                                    <p class="text-sm text-gray-600">60-day supply of premium omega-3 blend. Each bottle provides 30 days of optimal dosage.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">2x Travel Size (100ml)</strong>
+                                    <p class="text-sm text-gray-600">20-day backup supply in convenient travel size. Perfect for trips or keeping at work.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">2x BalanceTest ($150 value)</strong>
+                                    <p class="text-sm text-gray-600">Scientific proof of your progress. Test before and after 120 days to see your transformation.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                <i class="fas fa-sync text-primary text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium mb-2">Smart Monthly Support</h3>
+                                <p class="text-sm text-gray-600 mb-3">Maintain your results with convenient monthly delivery</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">Monthly BalanceOil+ (300ml)</strong>
+                                    <p class="text-sm text-gray-600">30-day supply delivered to your door. Never run out of your daily wellness routine.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">Flexible & Convenient</strong>
+                                    <p class="text-sm text-gray-600">Adjust or cancel anytime. Free shipping and priority customer support included.</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-primary mt-1 mr-2"></i>
+                                <div>
+                                    <strong class="text-gray-700">Save $334 ($530 → $196)</strong>
+                                    <p class="text-sm text-gray-600">Plus earn 14 credits towards future purchases. Maximum value for your wellness journey.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Daily Usage Guide -->
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="text-lg font-medium mb-4">Your Daily Wellness Journey</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-primary font-medium">1</span>
+                                </div>
+                                <h4 class="font-medium">First 30 Days</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Start with 0.15ml per kg body weight daily. A 300ml bottle provides a full month's supply for the average adult. Use your travel bottle as backup.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-primary font-medium">2</span>
+                                </div>
+                                <h4 class="font-medium">Days 30-120</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Continue your daily routine with your second bottle. You'll start noticing improvements in energy, focus, and overall well-being within 4-8 weeks.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex items-center mb-2">
+                                <div class="bg-primary/10 w-8 h-8 rounded-full flex items-center justify-center mr-3">
+                                    <span class="text-primary font-medium">3</span>
+                                </div>
+                                <h4 class="font-medium">Beyond 120 Days</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                Take your second BalanceTest to see your transformation. Adjust your maintenance dose based on results. Continue with monthly deliveries for lasting benefits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Product Overview -->
+    <section class="product-overview py-6 md:py-8">
+        <div class="container content-container px-4">
+            <div class="product-grid">
+                <div class="main-content max-w-full">
+                    <h1 class="product-title text-2xl md:text-3xl leading-tight mb-3">BalanceOil+ Kit with Test</h1>
+                    <div class="product-description text-readable mb-3 max-w-prose">
+                        Transform your health with our premium BalanceOil+ Kit. The included BalanceTest provides highly accurate readings of 11 fatty acid levels in your blood, including the Omega-6:3 ratio and six key health markers. Our unique BalanceOil+ is a synergistic blend of pure fish oil and premium extra virgin olive oil, scientifically designed to restore your body's essential fatty acid balance within 120 days.
+                    </div>
+
+                    <div class="benefits-overview mb-4">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-heart text-primary text-xl mr-2"></i>
+                                    <h3 class="text-lg font-medium">Heart Health</h3>
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    <strong class="text-primary">Supports normal heart function</strong> with 
+                                    <span class="text-base font-bold text-accent">250 mg daily EPA & DHA</span>. 
+                                    These essential omega-3 fatty acids are crucial for maintaining cardiovascular health.
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-brain text-primary text-xl mr-2"></i>
+                                    <h3 class="text-lg font-medium">Brain Function</h3>
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    <strong class="text-primary">Enhances brain function</strong> with 
+                                    <span class="text-base font-bold text-accent">250 mg daily DHA</span>. 
+                                    This omega-3 fatty acid is essential for maintaining mental clarity and cognitive performance.
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white rounded-lg shadow-sm">
+                                <div class="flex items-center mb-1">
+                                    <i class="fas fa-shield-virus text-primary text-xl mr-2"></i>
+                                    <h3 class="text-lg font-medium">Immune Support</h3>
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    <strong class="text-primary">Strengthens your body's natural defenses</strong> with 
+                                    <span class="text-base font-bold text-accent">Vitamin D</span>. 
+                                    This essential nutrient plays a vital role in maintaining a healthy immune system.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar mt-8 md:mt-0">
+                    <div id="zinzino-partner-container"></div>
+
+                    <div class="kit-contents mt-4 bg-white rounded-lg shadow-sm p-4">
+                        <h3 class="text-lg leading-snug mb-3"><i class="fas fa-box-open"></i> Kit Contents</h3>
+                        <div class="delivery-section mb-3">
+                            <h4 class="text-base leading-snug mb-2">First Delivery</h4>
+                            <ul class="kit-list text-readable--small">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle"></i>
+                                    2x BalanceOil+ (300ml)
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle"></i>
+                                    2x BalanceOil+ (100ml) Travel Size
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle"></i>
+                                    1x BalanceTest*
+                                </li>
+                            </ul>
+                            <p class="text-disclaimer">*Second BalanceTest delivered after 120 days</p>
+                        </div>
+                        
+                        <div class="delivery-section">
+                            <h4 class="text-base leading-snug mb-2">Monthly Subscription</h4>
+                            <ul class="kit-list text-readable--small">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle"></i>
+                                    1x BalanceOil+ (300ml) $43.00
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Initialize Zinzino Partner Component
+            fetch('/components/zinzino-partner.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('zinzino-partner-container').innerHTML = html;
+                    initZinzinoPartner({
+                        price: '$196.00',
+                        originalPrice: '$530.00',
+                        savings: '63%',
+                        credits: '14.00',
+                        buyLink: 'https://www.zinzino.com/shop/2016354642/balanceoil-plus-kit-with-test'
+                    });
+                });
+        </script>
+    </section>
+
+    <section class="benefits-container py-24 bg-gradient-light">
+        <div class="benefits-section content-container--wide mx-auto px-4 max-w-7xl">
+            <div class="benefits-header text-center mb-12 pt-14">
+                <h2 class="text-2xl leading-tight mb-4">Key Benefits of BalanceOil+</h2>
+                <p class="text-readable mx-auto max-w-2xl">Discover how our scientifically formulated blend supports your overall health and well-being.</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-heart text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Heart & Brain Health</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Synergistic formula that contributes to normal heart, brain and immune function
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Antioxidant Protection</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Helps maintain polyphenol levels in your body to protect blood lipids from oxidative stress*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-brain text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Cognitive Function</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Contributes to normal brain function with <span class="text-base font-medium">700 mg DHA</span> daily dosage*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-shield-virus text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Immune Support</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Contributes to normal immune function with <span class="text-base font-medium">20 µg Vitamin D3</span> daily dosage*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-eye text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Eye Health</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Supports healthy and normal eye function with <span class="text-base font-medium">700 mg DHA</span> daily dosage*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-bone text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Bone & Muscle Health</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Contributes to healthy bones, muscles, teeth and cells with <span class="text-base font-medium">20 µg Vitamin D3</span> daily dosage*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-chart-line text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">EPA & DHA Levels</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Helps maintain optimal levels of essential EPA and DHA fatty acids in your body*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-balance-scale text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Omega Balance</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Helps maintain optimal Omega-6:3 ratio for better overall health*
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="benefit-card hover-lift">
+                    <div class="benefit-card__inner">
+                        <div class="benefit-card__icon mb-4">
+                            <i class="fas fa-heartbeat text-xl"></i>
+                        </div>
+                        <h3 class="text-lg leading-snug mb-2">Cardiovascular Health</h3>
+                        <div class="benefit-card__content text-readable--small">
+                            Supports normal blood triglyceride levels, blood pressure and blood calcium levels*
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-disclaimer text-center mt-12 max-w-3xl mx-auto text-sm text-gray-600">
+                * These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+            </div>
+        </div>
+
+        <style>
+            .bg-gradient-light {
+                background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            }
+
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            }
+
+            .benefit-card {
+                background: white;
+                border-radius: 12px;
+                overflow: hidden;
+                padding: 1.5rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            }
+
+            .benefit-card__inner {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .benefit-card__icon {
+                width: 48px;
+                height: 48px;
+                background: var(--primary-color);
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                transition: transform 0.3s ease;
+            }
+
+            .benefit-card:hover .benefit-card__icon {
+                transform: scale(1.1);
+            }
+
+            .benefits-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                max-width: 1280px;
+                margin: 0 auto 2rem;
+            }
+
+            @media (max-width: 768px) {
+                .benefits-grid {
+                    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                    gap: 1.5rem;
+                    padding: 0 1rem;
+                }
+
+                .benefit-card {
+                    padding: 1.25rem;
+                }
+            }
+        </style>
+    </section>
+
+    <!-- Ingredients Section -->
+    <section class="ingredients">
+        <div class="container content-container">
+            <div class="ingredients-header text-center">
+                <h2 class="text-2xl leading-tight">Premium Ingredients</h2>
+                <p class="text-readable">Each ingredient in BalanceOil+ is carefully selected for its purity and potency, working together to optimize your omega balance.</p>
+            </div>
+            
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="ingredient-card__header">
+                        <div class="ingredient-card__header-content">
+                            <div class="ingredient-card__icon">
+                                <i class="fas fa-fish"></i>
+                            </div>
+                            <h3 class="text-lg leading-snug">Wild-Caught Fish Oil</h3>
+                        </div>
+                        <p class="text-readable--small">Premium fish oil from wild-caught small fish, rich in EPA & DHA</p>
+                    </div>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-card__header">
+                        <div class="ingredient-card__header-content">
+                            <div class="ingredient-card__icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h3 class="text-lg leading-snug">Extra Virgin Olive Oil</h3>
+                        </div>
+                        <p class="text-readable--small">Cold-pressed, pre-harvest olive oil rich in polyphenols</p>
+                    </div>
+                </div>
+                
+                <div class="ingredient-card">
+                    <div class="ingredient-card__header">
+                        <div class="ingredient-card__header-content">
+                            <div class="ingredient-card__icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <h3 class="text-lg leading-snug">Vitamin D3</h3>
+                        </div>
+                        <p class="text-readable--small">Natural vitamin D3 (cholecalciferol) from lanolin</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ingredients-details">
+        <div class="container content-container">
+            <div class="ingredients-details__header">
+                <h2 class="text-2xl leading-tight">The Science Behind Our Ingredients</h2>
+            </div>
+            <div class="ingredients-cards">
+                <div class="ingredient-card">
+                    <div class="ingredient-card__header">
+                        <div class="ingredient-card__header-content">
+                            <div class="ingredient-card__icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3 class="text-lg leading-snug">Scientific Formulation</h3>
+                        </div>
+                    </div>
+                    <div class="ingredient-card__body text-readable--small">
+                        Our formula is based on the latest scientific research in omega-3 fatty acids and their role in human health. Each ingredient is carefully measured and tested for maximum efficacy.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="proof-section">
+                <h3 class="text-xl leading-snug">The Power of Synergy</h3>
+                <p class="text-readable">Our scientists formulated BalanceOil+ to combine the Omega-3 with the correct amounts of olive oil that provides Omega-9 and anti-oxidants in extra high amounts. This synergistic combination makes it possible to safely adjust and maintain the Omega-3 in your body to achieve an Omega-6:3 Balance below 3:1.</p>
+                
+                <h3 class="text-xl leading-snug">Proven Results in 120 Days</h3>
+                <p class="text-readable">Our certified laboratories verify the results of your before and after tests, showing your body's improvement in essential fatty acid levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container content-container">
+            <div class="video-content">
+                <div class="video-text">
+                    <h2 class="text-2xl leading-tight">Experience the Power of BalanceOil+</h2>
+                    <p class="text-readable">Watch how our unique formula works to restore your body's essential fatty acid balance and improve your overall health.</p>
+                </div>
+                <div class="video-wrapper">
+                    <video id="product-video" class="product-video" poster="/assets/images/products/balanceoil/video-poster.jpg">
+                        <source src="/assets/videos/balanceoil-explainer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls">
+                        <button class="play-pause">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div>
+                        <button class="mute">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="fullscreen">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Section -->
+    <section class="how-to-use">
+        <div class="container">
+            <div class="how-to-use__header">
+                <h2>How to Use</h2>
+            </div>
+            <div class="usage-cards">
+                <div class="usage-card">
+                    <div class="usage-card__header">
+                        <div class="usage-card__icon">
+                            <i class="fas fa-prescription-bottle"></i>
+                        </div>
+                        <h3 class="usage-card__title">Suggested Use</h3>
+                    </div>
+                    <div class="usage-card__content">
+                        <p>0.0136 tsp x lb body weight. Adjust serving size based on body weight:</p>
+                        <table class="dosage-table">
+                            <tr>
+                                <th>Body Weight</th>
+                                <th>Daily Dose</th>
+                            </tr>
+                            <tr>
+                                <td>110 lbs</td>
+                                <td>1.5 tsp</td>
+                            </tr>
+                            <tr>
+                                <td>150 lbs</td>
+                                <td>2.0 tsp</td>
+                            </tr>
+                            <tr>
+                                <td>220 lbs</td>
+                                <td>3.0 tsp</td>
+                            </tr>
+                        </table>
+                        <p><small>Note: 1 tsp = 5 mL. Do not exceed recommended daily dose. Combine dietary supplements with a balanced diet and healthy lifestyle for best results.</small></p>
+                    </div>
+                </div>
+
+                <div class="usage-card">
+                    <div class="usage-card__header">
+                        <div class="usage-card__icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 class="usage-card__title">Warning</h3>
+                    </div>
+                    <div class="usage-card__content">
+                        <p>Consult your physician before using BalanceOil™ if you are:</p>
+                        <ul>
+                            <li>Pregnant</li>
+                            <li>Nursing</li>
+                            <li>Taking prescription drugs</li>
+                            <li>Have a medical condition</li>
+                        </ul>
+                        <p><strong>Important:</strong> Do not give BalanceOil™ to children under four years of age.</p>
+                    </div>
+                </div>
+
+                <div class="usage-card">
+                    <div class="usage-card__header">
+                        <div class="usage-card__icon">
+                            <i class="fas fa-temperature-low"></i>
+                        </div>
+                        <h3 class="usage-card__title">Storage</h3>
+                    </div>
+                    <div class="usage-card__content">
+                        <ul>
+                            <li><strong>Unopened bottles:</strong> Store in a dark dry place at room temperature or in the refrigerator.</li>
+                            <li><strong>Opened bottles:</strong> Store in refrigerator and use within 45 days.</li>
+                            <li><strong>Note:</strong> The oil may become cloudy at temperatures lower than 4°C (39°F) due to the solidification of the olive oil. The oil will clear at room temperature.</li>
+                            <li><strong>Safety:</strong> Keep out of reach of children.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placeholder sections for remaining content -->
+    <section id="documents">
+        <!-- Documents and Certificates will go here -->
+    </section>
+
+    <footer class="product-footer">
+        <div class="container">
+            <div class="support-info">
+                <p>If you need additional support, please contact our Customer Care team at <a href="tel:+15612031767">+1 (561) 203-1767</a> or <a href="#">online here</a>.</p>
+                <p>Should you ever want to change or cancel your monthly order, simply contact our Customer Care team at least two business days prior to your next "Subscribe & Save" order.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/product-detail.js"></script>
+
+    <script>
+        // Add this to your existing JavaScript file or create a new one
+        document.addEventListener('DOMContentLoaded', function() {
+            const ingredientCards = document.querySelectorAll('.ingredient-card__header');
+            
+            ingredientCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const parent = card.parentElement;
+                    parent.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+    <style>
+        .partner-badge .badge-content {
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s ease;
+        }
+
+        .partner-badge .badge-content:hover {
+            transform: translateY(-1px);
+        }
+
+        .trust-section {
+            border: 1px solid #e5e7eb;
+        }
+
+        .trust-item i {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 767px) {
+            .partner-badge {
+                margin-left: -1rem;
+                margin-right: -1rem;
+            }
+
+            .partner-badge .badge-content {
+                border-radius: 0;
+                display: block;
+                text-align: center;
+            }
+
+            .trust-section {
+                margin-left: -1rem;
+                margin-right: -1rem;
+                border-radius: 0;
+            }
+        }
+
+        .mobile-menu {
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+    <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="quantity-input-container">
+        <button class="quantity-btn minus" aria-label="Decrease quantity">
+            <i class="fas fa-minus"></i>
+        </button>
+        <input type="number" class="quantity-input" value="1" min="1" aria-label="Product quantity">
+        <button class="quantity-btn plus" aria-label="Increase quantity">
+            <i class="fas fa-plus"></i>
+        </button>
+    </div>
+    <button class="close-modal" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+    </button>
+</body>
+</html>

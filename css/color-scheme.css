@@ -1,0 +1,76 @@
+:root {
+    /* Primary Colors */
+    --primary-blue-dark: #00588B;
+    --primary-blue-light: #71C9F5;
+
+    /* Secondary Colors */
+    --secondary-green-dark: #4A8C00;
+    --secondary-green-light: #A6C507;
+    --secondary-yellow: #F2CF2D;
+    --secondary-blue-dark: #1F3545;
+
+    /* Neutral Colors */
+    --neutral-white: #FFFFFF;
+    --neutral-light-gray: #F0F0F0;
+
+    /* Color Mappings */
+    --color-background: var(--neutral-white);
+    --color-text-primary: var(--secondary-blue-dark);
+    --color-text-heading: var(--primary-blue-dark);
+    --color-link-default: var(--primary-blue-light);
+    --color-link-active: var(--primary-blue-dark);
+
+    /* Button Colors */
+    --color-button-primary-bg: var(--primary-blue-dark);
+    --color-button-primary-text: var(--neutral-white);
+    --color-button-secondary-bg: var(--primary-blue-light);
+    --color-button-secondary-text: var(--primary-blue-dark);
+
+    /* Utility Colors */
+    --color-highlight-1: var(--secondary-green-light);
+    --color-highlight-2: var(--secondary-yellow);
+}
+
+/* Global Color Application */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-heading);
+}
+
+a {
+    color: var(--color-link-default);
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--color-link-active);
+}
+
+.btn-primary {
+    background-color: var(--color-button-primary-bg) !important;
+    border-color: var(--color-button-primary-bg) !important;
+    color: var(--color-button-primary-text) !important;
+}
+
+.btn-secondary {
+    background-color: var(--color-button-secondary-bg) !important;
+    border-color: var(--color-button-secondary-bg) !important;
+    color: var(--color-button-secondary-text) !important;
+}
+
+/* Utility Classes for Background and Text */
+.bg-primary-light {
+    background-color: var(--primary-blue-light) !important;
+}
+
+.bg-secondary-green {
+    background-color: var(--secondary-green-light) !important;
+}
+
+.text-highlight {
+    color: var(--secondary-yellow) !important;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="50" viewBox="0 0 200 50" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .text-primary { fill: #00205B; }
+        .text-accent { fill: #E31B23; }
+        .icon { fill: #5072A7; }
+    </style>
+    <!-- Omega Symbol -->
+    <path class="icon" d="M30 10 C30 20, 20 30, 10 30 C0 30, -10 20, -10 10 L0 10 C0 15, 5 20, 10 20 C15 20, 20 15, 20 10 Z" transform="translate(20, 5)"/>
+    <!-- Text -->
+    <text x="50" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="24">
+        <tspan class="text-primary">OMEGA</tspan>
+        <tspan class="text-accent">3</tspan>
+        <tspan class="text-primary">DAILY</tspan>
+    </text>
+</svg>

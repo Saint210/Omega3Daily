@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 120-Day BalanceOil+ Vegan Challenge | Omega3Daily</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2C7BE5;
+            --secondary-color: #00A9A5;
+            --accent-color: #F2CF2D;
+            --text-color: #2C3E50;
+            --light-bg: #f8f9fa;
+            --primary-blue-dark: #2C7BE5;
+            --primary-blue-light: #3498db;
+            --secondary-yellow: #F2CF2D;
+            --secondary-blue-dark: #2C3E50;
+            --neutral-light-gray: #f8f9fa;
+            --header-height: 100px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-sage-enhanced {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sage-enhanced:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            color: white;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Partner Badge */
+        .partner-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .partner-badge i {
+            color: var(--accent-color);
+        }
+
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #27ae60;
+            --primary-blue-dark: #0a2342;
+            --secondary-green-dark: #26d0ce;
+            --neutral-white: #f8f9fa;
+        }
+
+        .bg-soft-green {
+            background-color: #f0f7f4;
+        }
+
+        .text-accent {
+            color: var(--accent-color);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--secondary-green-dark) 100%);
+        }
+
+        .product-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .savings-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .certification-badge {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin: 1rem;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img 
+                    src="assets/images/logo/omega-3-daily-logo.jpeg" 
+                    alt="Omega 3 Daily Logo" 
+                    style="max-height: 75px;"
+                />
+                <span class="ms-3 fw-bold text-dark">Omega3Daily</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative overflow-hidden text-white py-5">
+        <div class="container pt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <span class="partner-badge">
+                        <i class="fas fa-check-circle me-2"></i> Zinzino Independent Partner
+                    </span>
+                    <h1 class="display-4 fw-bold mb-4">The 120-Day BalanceOil+ Vegan Challenge</h1>
+                    <p class="lead mb-4">Bringing Your Body Back in Balance in 120 Days</p>
+                    <div class="d-flex gap-3">
+                        <a href="#products" class="btn btn-light btn-lg px-4">Start Now</a>
+                        <a href="#how-it-works" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1">
+                    <img src="images/Balance Test Basic Vegan Kit.png" alt="BalanceOil+ Vegan Challenge" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Take the Challenge Section -->
+    <section id="why-challenge" class="py-5 bg-soft-green">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">Why Take the 120-Day Challenge?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 product-card shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-sync feature-icon mb-3"></i>
+                            <h3 class="h4 mb-3">Red Blood Cell Turnover</h3>
+                            <p class="mb-0">120 days for your body to replace old red blood cells, allowing Omega-3 levels to stabilize.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 product-card shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-chart-line feature-icon mb-3"></i>
+                            <h3 class="h4 mb-3">Proven Results</h3>
+                            <p class="mb-0">Clinical studies show most people achieve the target 3:1 ratio within this timeframe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 product-card shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-tasks feature-icon mb-3"></i>
+                            <h3 class="h4 mb-3">Track Your Progress</h3>
+                            <p class="mb-0">Measure your Omega-6:3 ratio before and after with the BalanceTest.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="py-5">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">How the 120-Day Challenge Works</h2>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-vial feature-icon mb-3"></i>
+                        <h3 class="h4">1. Start with a BalanceTest</h3>
+                        <p>Measure your current Omega-6:3 ratio with a simple dried blood spot test.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-capsules feature-icon mb-3"></i>
+                        <h3 class="h4">2. Take BalanceOil+ Vegan Daily</h3>
+                        <p>Follow the recommended dosage based on your body weight.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="p-4">
+                        <i class="fas fa-check-circle feature-icon mb-3"></i>
+                        <h3 class="h4">3. Retest After 120 Days</h3>
+                        <p>See your progress with a second BalanceTest.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-soft-green">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">Choose Your BalanceOil+ Vegan Product</h2>
+            <div class="row g-4">
+                <div class="col-lg-6 col-xl-3">
+                    <div class="card h-100 product-card shadow">
+                        <div class="savings-badge">Save 30%</div>
+                        <div class="card-body p-4">
+                            <img src="images/Zinzino-VEGAN-LEMON.png" alt="BalanceOil+ Vegan" class="product-image">
+                            <h3 class="h4 mb-3">BalanceOil+ Vegan without Test</h3>
+                            <p class="price-tag mb-3">$76.00 <small class="text-muted"><del>$108.00</del></small></p>
+                            <p class="small text-muted mb-2">Monthly fee: $76.00 (5.00 cr)</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Vegan Omega-3 from micro-algae</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>High in EPA, DHA, SDA + GLA</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Olive polyphenols, echium seed oil and vitamin D3</li>
+                            </ul>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910278" class="btn btn-primary w-100" target="_blank">Subscribe & Save</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+                    <div class="card h-100 product-card shadow">
+                        <div class="savings-badge">Save 67%</div>
+                        <div class="card-body p-4">
+                            <img src="images/Balance Test Basic Vegan Kit.png" alt="BalanceOil+ Vegan with Test" class="product-image">
+                            <h3 class="h4 mb-3">BalanceOil+ Vegan with Test</h3>
+                            <p class="price-tag mb-3">$147.00 <small class="text-muted"><del>$448.00</del></small></p>
+                            <p class="small text-muted mb-2">Monthly fee: $76.00 (5.00 cr)</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Vegan Omega-3 from micro-algae</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>High in EPA, DHA, SDA + GLA</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Includes BalanceTest</li>
+                            </ul>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910279" class="btn btn-primary w-100" target="_blank">Subscribe & Save</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+                    <div class="card h-100 product-card shadow">
+                        <div class="savings-badge">Save 67%</div>
+                        <div class="card-body p-4">
+                            <img src="images/BalanceOil+ Vegan Kit with Test.png" alt="Balance Test Basic Vegan Kit" class="product-image">
+                            <h3 class="h4 mb-3">Balance Test Basic Vegan Kit</h3>
+                            <p class="price-tag mb-3">$147.00 <small class="text-muted"><del>$448.00</del></small></p>
+                            <p class="small text-muted mb-2">Monthly fee: $76.00 (5.00 cr)</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>High in Omega-3 (EPA + DHA)</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Olive polyphenols and vitamin D3</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Includes BalanceTest</li>
+                            </ul>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910575" class="btn btn-primary w-100" target="_blank">Subscribe & Save</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-3">
+                    <div class="card h-100 product-card shadow">
+                        <div class="savings-badge">Save 58%</div>
+                        <div class="card-body p-4">
+                            <img src="images/BalanceOil+ Vegan Kit with Test.png" alt="BalanceOil+ Vegan Kit with Test" class="product-image">
+                            <h3 class="h4 mb-3">BalanceOil+ Vegan Kit with Test</h3>
+                            <p class="price-tag mb-3">$234.00 <small class="text-muted"><del>$556.00</del></small></p>
+                            <p class="small text-muted mb-2">Monthly fee: $76.00 (14.00 cr)</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Vegan Omega-3 from micro-algae</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>High in EPA, DHA, SDA + GLA</li>
+                                <li class="mb-2"><i class="fas fa-check text-accent me-2"></i>Includes BalanceTest</li>
+                            </ul>
+                            <a href="https://www.zinzino.com/shop/2016354642/US/en-US/products/omega-supplements/910355" class="btn btn-primary w-100" target="_blank">Subscribe & Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">Key Benefits of BalanceOil+ Vegan</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <i class="fas fa-brain feature-icon mb-3"></i>
+                        <h3 class="h4">Brain Function</h3>
+                        <p>1120 mg DHA per daily serving for normal brain function</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <i class="fas fa-heart feature-icon mb-3"></i>
+                        <h3 class="h4">Heart Health</h3>
+                        <p>780 mg EPA and 1120 mg DHA supporting heart function</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <i class="fas fa-shield-virus feature-icon mb-3"></i>
+                        <h3 class="h4">Immune System</h3>
+                        <p>Vegan Vitamin D3 for normal immune function</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <i class="fas fa-leaf feature-icon mb-3"></i>
+                        <h3 class="h4">Cell Protection</h3>
+                        <p>Olive polyphenols protect from oxidative damage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-soft-green">
+        <div class="container">
+            <h2 class="display-5 text-center mb-5">Certifications and Quality</h2>
+            <div class="row justify-content-center text-center">
+                <div class="col-md-3">
+                    <img src="images/informed-sport-certified.png" alt="Informed Sport Certified" class="certification-badge">
+                    <h3 class="h5">Informed Sport Certified</h3>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/halal-certified.png" alt="Halal Certified" class="certification-badge">
+                    <h3 class="h5">Halal Certified</h3>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/vegan-society.png" alt="Vegan Society Certified" class="certification-badge">
+                    <h3 class="h5">Vegan Society Certified</h3>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/non-gmo.png" alt="Non-GMO" class="certification-badge">
+                    <h3 class="h5">Non-GMO</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="display-5 mb-4">Ready to Take the Challenge?</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                            <a href="#products" class="btn btn-primary btn-lg px-4">Choose Your Product</a>
+                            <a href="#how-it-works" class="btn btn-outline-primary btn-lg px-4">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-3 bg-light">
+        <div class="container">
+            <p class="text-center text-muted small">*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

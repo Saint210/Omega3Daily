@@ -1,0 +1,114 @@
+<!-- Zinzino Partnership Template -->
+<div class="zinzino-partner-template">
+    <div class="partner-badge mb-4">
+        <div class="badge-content bg-white rounded-lg shadow-sm p-3 text-center">
+            <span class="text-sm font-medium text-primary">Zinzino Independent Partner</span>
+        </div>
+    </div>
+
+    <div class="price-card bg-white rounded-lg shadow-sm p-6">
+        <!-- Price details will be injected via JavaScript -->
+        <div class="price-amount text-2xl leading-tight mb-2"></div>
+        <div class="original-price text-base text-muted mb-1"></div>
+        <div class="savings-badge inline-block bg-accent text-white text-sm px-3 py-1 rounded-full mb-2"></div>
+        <div class="credits-info text-sm mb-4"></div>
+        <a href="" target="_blank" rel="noopener noreferrer" class="add-to-cart-btn w-full text-base">
+            <i class="fas fa-shopping-cart mr-2"></i>
+            Buy on Zinzino
+        </a>
+        <div class="purchase-info mt-3 text-center">
+            <div class="text-xs text-gray-600">
+                <i class="fas fa-lock mr-1"></i> Secure checkout on Zinzino.com
+            </div>
+        </div>
+    </div>
+
+    <div class="trust-section bg-white rounded-lg shadow-sm p-2 mt-2">
+        <div class="flex justify-between items-center text-xs text-gray-600">
+            <div class="trust-badge flex items-center">
+                <i class="fas fa-shield-alt text-primary mr-1"></i>
+                Official
+            </div>
+            <div class="trust-badge flex items-center">
+                <i class="fas fa-tag text-primary mr-1"></i>
+                Same Price
+            </div>
+            <div class="trust-badge flex items-center">
+                <i class="fas fa-truck text-primary mr-1"></i>
+                Direct Ship
+            </div>
+        </div>
+        <div class="text-xs text-center text-gray-500 mt-1">
+            Partner commission at no extra cost
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Zinzino Partnership Template Styles */
+    .zinzino-partner-template {
+        --badge-border: #e5e7eb;
+        --text-primary: var(--primary-color);
+        --text-gray: #6b7280;
+    }
+
+    .zinzino-partner-template .partner-badge .badge-content {
+        border: 1px solid var(--badge-border);
+        transition: transform 0.2s ease;
+    }
+
+    .zinzino-partner-template .partner-badge .badge-content:hover {
+        transform: translateY(-1px);
+    }
+
+    .zinzino-partner-template .trust-section {
+        border: 1px solid var(--badge-border);
+    }
+
+    .zinzino-partner-template .trust-badge i {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .zinzino-partner-template .text-primary {
+        color: var(--text-primary);
+    }
+
+    .zinzino-partner-template .partner-disclosure {
+        line-height: 1.4;
+    }
+
+    @media (max-width: 767px) {
+        .zinzino-partner-template .partner-badge,
+        .zinzino-partner-template .price-card,
+        .zinzino-partner-template .trust-section {
+            margin-left: -1rem;
+            margin-right: -1rem;
+            border-radius: 0;
+        }
+
+        .zinzino-partner-template .trust-badges {
+            gap: 1rem;
+        }
+    }
+</style>
+
+<script>
+// Function to initialize the Zinzino partner template with product data
+function initZinzinoPartner(productData) {
+    const template = document.querySelector('.zinzino-partner-template');
+    if (!template) return;
+
+    // Update price information
+    template.querySelector('.price-amount').textContent = productData.price;
+    template.querySelector('.original-price').textContent = productData.originalPrice;
+    template.querySelector('.savings-badge').textContent = `Save ${productData.savings}`;
+    template.querySelector('.credits-info').textContent = `Earn ${productData.credits} credits`;
+    
+    // Update buy button link
+    const buyButton = template.querySelector('.add-to-cart-btn');
+    if (buyButton) {
+        buyButton.href = productData.buyLink;
+    }
+}
+</script>

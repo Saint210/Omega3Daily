@@ -1,0 +1,118 @@
+/* Balance Oil Test Page Styles */
+
+/* Hero Section */
+.hero-section {
+    min-height: 600px;
+    background: linear-gradient(rgba(0, 32, 91, 0.8), rgba(0, 32, 91, 0.8)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* Product Cards */
+.product-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    max-height: 200px;
+    object-fit: contain;
+}
+
+/* Benefits Section */
+.benefit-icon {
+    font-size: 2.5rem;
+    color: #00205B;
+    margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.testimonial-card {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #00205B;
+    color: white;
+}
+
+/* Call to Action */
+.cta-section {
+    background: linear-gradient(135deg, #00205B, #5072A7);
+    color: white;
+    padding: 4rem 0;
+}
+
+/* Footer */
+.footer {
+    background: #00205B;
+    color: white;
+    padding: 3rem 0;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+/* Utility Classes */
+.text-primary-dark {
+    color: #00205B;
+}
+
+.bg-primary-dark {
+    background-color: #00205B;
+}
+
+.btn-outline-primary {
+    border-color: #00205B;
+    color: #00205B;
+}
+
+.btn-outline-primary:hover {
+    background-color: #00205B;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+    }
+    
+    .benefit-icon {
+        font-size: 2rem;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}

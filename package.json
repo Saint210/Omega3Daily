@@ -1,0 +1,37 @@
+{
+  "name": "omega3daily",
+  "version": "1.0.0",
+  "description": "Omega3Daily Website Optimization",
+  "scripts": {
+    "start": "npx live-server",
+    "build:css": "postcss src/css/main.css -o dist/css/main.min.css",
+    "optimize:images": "imagemin src/images/* --out-dir=dist/images",
+    "lighthouse": "npx lighthouse https://omega3daily.com --view",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:accessibility": "node scripts/accessibility-tests.js",
+    "test:visual": "node scripts/visual-tests.js",
+    "lint": "eslint . && stylelint '**/*.css'",
+    "format": "prettier --write '**/*.{js,jsx,css,html}'"
+  },
+  "keywords": [
+    "health",
+    "omega3",
+    "nutrition"
+  ],
+  "author": "Omega3Daily Team",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "imagemin": "^9.0.0",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
+    "lighthouse": "^10.4.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.49",
+    "postcss-cli": "^10.1.0"
+  },
+  "main": "imagemin.config.js"
+}

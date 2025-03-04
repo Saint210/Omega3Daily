@@ -1,0 +1,31 @@
+.site-header {
+  --logo-height: 80px;
+  --logo-height-mobile: 60px;
+  padding: 1rem 0;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.header-logo {
+  height: var(--logo-height);
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    height: var(--logo-height-mobile);
+  }
+  
+  .brand-text {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+}

@@ -1,0 +1,13 @@
+.product-secondary {
+    width: 40%;
+}
+
+.product-secondary.top-left {
+    top: 20%;
+    left: -10%;
+}
+
+.product-secondary.bottom-right {
+    bottom: 10%;
+    right: -10%;
+}

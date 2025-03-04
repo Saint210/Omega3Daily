@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega 3 Supplements | Zinzino BalanceOil+ | Omega3Daily</title>
+    <meta name="description" content="Discover premium Omega 3 supplements designed to optimize your health. Zinzino BalanceOil+ offers scientifically formulated nutrition for whole-body wellness.">
+    <meta name="keywords" content="Omega 3 supplements, Zinzino BalanceOil, EPA DHA, nutritional health, wellness supplements">
+    <link rel="canonical" href="https://omega3daily.com/omega3-supplements">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://omega3daily.com/omega3-supplements">
+    <meta property="og:title" content="Omega 3 Supplements | Zinzino BalanceOil+">
+    <meta property="og:description" content="Discover premium Omega 3 supplements designed to optimize your health. Zinzino BalanceOil+ offers scientifically formulated nutrition for whole-body wellness.">
+    <meta property="og:image" content="images/zinzino-balanceoil-plus.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://omega3daily.com/omega3-supplements">
+    <meta name="twitter:title" content="Omega 3 Supplements | Zinzino BalanceOil+">
+    <meta name="twitter:description" content="Discover premium Omega 3 supplements designed to optimize your health. Zinzino BalanceOil+ offers scientifically formulated nutrition for whole-body wellness.">
+    <meta name="twitter:image" content="images/zinzino-balanceoil-plus.webp">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2C7BE5;
+            --secondary-color: #00A9A5;
+            --accent-color: #F2CF2D;
+            --text-color: #2C3E50;
+            --light-bg: #f8f9fa;
+            --primary-blue-dark: #2C7BE5;
+            --primary-blue-light: #3498db;
+            --secondary-yellow: #F2CF2D;
+            --secondary-blue-dark: #2C3E50;
+            --neutral-light-gray: #f8f9fa;
+            --header-height: 100px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll offset for anchor links */
+        section[id] {
+            scroll-margin-top: var(--header-height);
+        }
+
+        /* Progress Bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            z-index: 1031;
+            transition: width 0.2s ease-out;
+        }
+
+        .navbar {
+            background-color: var(--neutral-white) !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand img {
+            max-height: 90px;
+            border-radius: 14px;
+            object-fit: contain;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-sage-enhanced {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-sage-enhanced:hover {
+            background-color: var(--primary-blue-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-section {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--secondary-color) 100%);
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/pattern-bg.png') repeat;
+            opacity: 0.1;
+        }
+
+        .floating-badge {
+            transform: rotate(20deg);
+            font-size: 0.9rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease-out forwards;
+        }
+
+        .animate-fade-left {
+            opacity: 0;
+            transform: translateX(20px);
+            animation: fadeLeft 0.6s ease-out 0.3s forwards;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: rotate(20deg) translateY(0); }
+            50% { transform: rotate(20deg) translateY(-10px); }
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image-container img {
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+            transition: transform 0.3s ease;
+            max-height: 500px;
+        }
+
+        .hero-image-container:hover img {
+            transform: translateY(-10px);
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-image-container {
+                margin-top: 2rem;
+            }
+        }
+
+        .how-it-works {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .step-number .badge {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .product-main {
+            max-height: 400px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+        }
+
+        .product-secondary {
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .product-secondary:hover {
+            transform: translateY(-10px);
+        }
+
+        .option-card {
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .option-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .guarantee-badge {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .test-result-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+            transform: translateY(20%) translateX(10%);
+        }
+
+        .success-stat {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--success-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            transform: translateY(-20%) translateX(10%);
+        }
+        
+        /* Test Results Section */
+        .test-results-section {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+        }
+        
+        .test-results-section .results-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-results-section .step-indicator {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .test-results-section .step-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+        
+        .test-results-section .step-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .test-results-section .results-preview {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .test-results-section .results-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .test-results-section .preview-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .test-results-section .results-preview:hover .preview-overlay {
+            opacity: 1;
+        }
+        
+        .test-results-section .action-panel {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .test-results-section .kit-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .test-results-section .price-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .test-results-section .amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .test-results-section .period {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-left: 1rem;
+        }
+        
+        .test-results-section .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .test-results-section .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .test-results-section .feature-list li i {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        .test-results-section .guarantee-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+        
+        /* Results Modal */
+        .results-modal {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .results-modal .modal-dialog {
+            max-width: 800px;
+        }
+        
+        .results-modal .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+        
+        .results-modal .modal-body {
+            padding: 0;
+        }
+        
+        .results-modal img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .results-modal .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .process-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        
+        .process-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .action-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        
+        .price-tag {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .period {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-left: 1rem;
+        }
+        
+        .guarantee-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #e9ecef;
+            border-radius: 1rem;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            background: white;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            position: relative;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 1rem 1rem 0 0;
+            text-align: center;
+        }
+
+        .product-image img {
+            max-height: 200px;
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .product-info {
+            background: white;
+            border-radius: 0 0 1rem 1rem;
+        }
+
+        .product-meta {
+            font-size: 0.9rem;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .price {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .original-price {
+            font-size: 0.9rem;
+        }
+
+        .savings-badge {
+            font-size: 0.8rem;
+        }
+
+        .subscription-info {
+            font-size: 0.9rem;
+            border: 1px solid #e9ecef;
+        }
+
+        .monthly-product {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .monthly-credits {
+            font-size: 0.8rem;
+        }
+
+        .category-products {
+            position: relative;
+        }
+
+        .category-products::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #e9ecef;
+            margin: 3rem 0;
+        }
+
+        .category-products:last-child::after {
+            display: none;
+        }
+
+        .credits {
+            color: #6c757d;
+        }
+
+        .top-left {
+            top: 20%;
+            left: -10%;
+        }
+
+        .bottom-right {
+            bottom: 10%;
+            right: -10%;
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-card.highlight {
+            border: 2px solid #ffc107;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .product-card.highlight:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.3);
+        }
+
+        .badge.bg-warning {
+            background-color: #ffc107 !important;
+            color: #000;
+        }
+
+        /* Product Section Styles */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .product-card .card-img-top {
+            transition: transform 0.3s ease;
+            object-fit: contain;
+            height: 200px;
+        }
+
+        .product-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .badge.bg-premium {
+            background-color: var(--secondary-yellow) !important;
+            color: var(--text-color);
+        }
+
+        .savings-badge {
+            font-size: 0.875rem;
+        }
+
+        .original-price {
+            color: #6c757d;
+            font-size: 0.875rem;
+        }
+
+        .credits {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+
+        .view-details-btn {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .view-details-btn:hover {
+            background-color: var(--primary-blue-dark);
+            border-color: var(--primary-blue-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Product Modal Styles */
+        .product-image-container {
+            position: relative;
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .product-image {
+            max-height: 300px;
+            width: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .quantity-input {
+            width: 60px !important;
+        }
+
+        .modal .badge {
+            font-size: 0.875rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .modal .current-price {
+            color: var(--primary-color);
+        }
+
+        .kit-contents ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .kit-contents ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Video styles */
+        .product-video {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .product-video video {
+            max-height: 400px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<!-- Load Product Section Template -->
+<script>
+    // Product Data
+    const products = [
+        {
+            id: 1,
+            name: "BalanceOil+ Premium",
+            description: "Our flagship Omega-3 supplement with premium polyphenol protection.",
+            image: "zinzino-balance-oil-plus-premium.png",
+            volume: "300 ml",
+            variant: "Lemon",
+            retail_price: "69.00",
+            premier_price: "49.00",
+            credits_required: 12,
+            is_vegan: false,
+            is_premium: true
+        },
+        {
+            id: 2,
+            name: "BalanceOil+ Vegan",
+            description: "Plant-based Omega-3 supplement derived from marine algae.",
+            image: "zinzino-balance-oil-vegan.png",
+            volume: "300 ml",
+            variant: "Lemon",
+            retail_price: "79.00",
+            premier_price: "59.00",
+            credits_required: 14,
+            is_vegan: true,
+            is_premium: true
+        },
+        {
+            id: 3,
+            name: "BalanceOil+ AquaX",
+            description: "Water-mixable Omega-3 supplement with enhanced absorption.",
+            image: "zinzino-balance-oil-aquax.png",
+            volume: "300 ml",
+            variant: "Citrus",
+            retail_price: "69.00",
+            premier_price: "49.00",
+            credits_required: 12,
+            is_vegan: false,
+            is_premium: false
+        }
+    ];
+
+    // Load product section template
+    fetch('/templates/product-section.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('product-section').innerHTML = html;
+            // Override loadProducts to use local data
+            window.loadProducts = function() {
+                const container = document.getElementById('product-container');
+                const template = document.getElementById('product-template');
+                
+                products.forEach(product => {
+                    const clone = template.content.cloneNode(true);
+                    
+                    // Set product data
+                    const img = clone.querySelector('img');
+                    img.src = `/assets/images/products/${product.image}`;
+                    img.alt = product.name;
+                    
+                    clone.querySelector('.product-title').textContent = product.name;
+                    clone.querySelector('.product-description').textContent = product.description;
+                    clone.querySelector('.volume').textContent = product.volume;
+                    clone.querySelector('.variant').textContent = product.variant;
+                    
+                    // Pricing
+                    clone.querySelector('.retail-price .amount').textContent = `$${product.retail_price}`;
+                    clone.querySelector('.premier-price .amount').textContent = `$${product.premier_price}`;
+                    clone.querySelector('.credits span').textContent = product.credits_required;
+                    
+                    // Badges
+                    if (product.is_vegan) {
+                        clone.querySelector('.vegan-badge').classList.remove('d-none');
+                    }
+                    if (product.is_premium) {
+                        clone.querySelector('.premium-badge').classList.remove('d-none');
+                    }
+                    
+                    // Add to cart button
+                    clone.querySelector('button').dataset.productId = product.id;
+                    
+                    container.appendChild(clone);
+                });
+            };
+            
+            // Initialize products
+            loadProducts();
+        });
+
+    function addToCart(button) {
+        const productId = button.dataset.productId;
+        // Add cart functionality here
+        console.log(`Adding product ${productId} to cart`);
+    }
+</script>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-bar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img 
+                    src="assets/images/logo/omega-3-daily-logo.jpeg" 
+                    alt="Omega 3 Daily Logo" 
+                />
+                <span class="ms-3 fw-bold text-dark">120 Day Omega 3 Challenge</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Progress bar functionality
+            window.addEventListener('scroll', function() {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                document.querySelector('.progress-bar').style.width = scrolled + '%';
+            });
+
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+<!-- Hero Section -->
+<section class="hero-section position-relative min-vh-80 d-flex align-items-center py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 text-white mb-5 mb-lg-0">
+                <span class="badge bg-warning text-dark px-3 py-2 rounded-pill mb-3 animate-fade-up">120-Day Challenge</span>
+                <h1 class="display-3 fw-bold mb-4 animate-fade-up">Start Your Transformation Today</h1>
+                <p class="lead mb-4 animate-fade-up">Choose your perfect Omega-3 supplement and begin your 120-day journey to optimal health. Scientifically proven formulations backed by our satisfaction guarantee.</p>
+                <div class="features mb-5 animate-fade-up">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check-circle text-warning me-3"></i>
+                        <span>Proven results in 120 days</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check-circle text-warning me-3"></i>
+                        <span>Personalized supplement recommendations</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-check-circle text-warning me-3"></i>
+                        <span>Money-back satisfaction guarantee</span>
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap gap-3 animate-fade-up">
+                    <a href="#products" class="btn btn-warning btn-lg px-4">Start Your Journey</a>
+                    <a href="#learn-more" class="btn btn-outline-light btn-lg px-4">View Results</a>
+                </div>
+            </div>
+            <div class="col-lg-6 position-relative">
+                <div class="hero-image-container text-center animate-fade-left">
+                    <img src="assets/images/zinzino-balanceoil-balancetest.png" alt="Premium Omega-3 Supplements" class="img-fluid">
+                    <div class="floating-badge position-absolute top-0 end-0 bg-warning text-dark p-3 rounded-circle">
+                        <div class="fw-bold">BEST</div>
+                        <div>SELLER</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section class="products-section py-5" id="products">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="display-4 fw-bold mb-3">Our Premium Omega-3 Products</h2>
+                    <p class="lead text-muted">Choose the perfect supplement for your wellness journey</p>
+                </div>
+            </div>
+        </div>
+        <div id="products-container" class="row g-4"></div>
+    </div>
+</section><template id="product-section-template">
+    <div class="product-section mb-5">
+        <h3 class="section-title h2 mb-4"></h3>
+        <p class="section-description lead mb-4"></p>
+        <div class="products-grid row g-4"></div>
+    </div>
+</template>
+<template id="product-card-template">
+    <div class="col-md-6 col-lg-3">
+        <div class="card h-100 product-card">
+            <div class="card-badges position-absolute top-0 end-0 p-3">
+                <span class="badge bg-premium d-none">Premium</span>
+                <span class="badge bg-success d-none">Vegan</span>
+                <span class="badge bg-info d-none">Most Popular</span>
+            </div>
+            <img src="" class="card-img-top p-4" alt="">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title"></h5>
+                <p class="card-text flex-grow-1"></p>
+                <div class="pricing mt-3">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="text-muted text-decoration-line-through original-price"></span>
+                        <span class="savings-badge badge bg-danger"></span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="current-price h4 mb-0"></div>
+                        <div class="credits text-muted small"></div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary w-100 view-details-btn">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template><script src="assets/js/product-section.js"></script>
+
+<!-- How the Challenge Works Section -->
+<section class="how-it-works py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">The Process</span>
+            <h2 class="display-4 fw-bold mb-3">How the 120-Day Challenge Works</h2>
+            <p class="lead text-muted mb-5">A scientifically proven approach to optimize your Omega-6:3 ratio</p>
+        </div>
+
+        <!-- Test Results Section -->
+        <section class="test-results-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="results-content">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="process-image-wrapper">
+                                        <img src="assets/images/balance-test-process.jpg" 
+                                             alt="Balance Test Process"
+                                             class="process-image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="action-content">
+                                        <div class="price-tag">
+                                            <div class="amount">$115</div>
+                                            <div class="period">Complete Testing Kit</div>
+                                        </div>
+                                        
+                                        <ul class="feature-list">
+                                            <li>
+                                                <i class="fas fa-flask"></i>
+                                                Professional Lab Analysis
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-chart-line"></i>
+                                                Detailed Results Report
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-box"></i>
+                                                1 Month BalanceOil Supply
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-users"></i>
+                                                Suitable for All Ages
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-lock"></i>
+                                                Safe & Secure Testing
+                                            </li>
+                                        </ul>
+                                        
+                                        <a href="#order" class="action-btn">
+                                            Get Your Test Kit Now
+                                        </a>
+                                        
+                                        <div class="guarantee-text">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <span>100% Satisfaction Guarantee</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-5">
+                    <div class="col-lg-8">
+                        <h2 class="display-5 fw-bold mb-3">How Your Test Works</h2>
+                        <p class="lead text-muted">Simple, secure, and scientifically proven process</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 text-primary mb-3">
+                                    <i class="fas fa-vial"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2">1. Take Test</h4>
+                                <p class="text-muted">Simple finger-prick blood test you can do at home</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 text-primary mb-3">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2">2. Send Sample</h4>
+                                <p class="text-muted">Mail your sample to our certified laboratory</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 text-primary mb-3">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2">3. Analysis</h4>
+                                <p class="text-muted">Expert analysis of 11 fatty acids in your blood</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body text-center p-4">
+                                <div class="display-4 text-primary mb-3">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <h4 class="fw-bold mb-2">4. Results</h4>
+                                <p class="text-muted">Receive your personalized report and recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Test Details Section -->
+        <section class="test-details py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="display-6 fw-bold mb-4">Scientific Analysis You Can Trust</h2>
+                        <div class="mb-4">
+                            <h4 class="fw-bold mb-3">What We Analyze</h4>
+                            <p class="text-muted">Our certified laboratory analyzes 11 fatty acids in your blood, including:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Omega-3 (EPA, DHA, DPA)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Omega-6 (LA, AA)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Saturated fatty acids</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Monounsaturated fatty acids</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-3">Safe & Secure Testing</h4>
+                            <p class="text-muted mb-0">Your test is processed in an independent, certified laboratory under strict quality control procedures. All personal information is handled with complete confidentiality.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-lg">
+                            <div class="card-body p-4">
+                                <h4 class="fw-bold mb-4">Average Customer Results</h4>
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="text-center">
+                                        <h3 class="text-danger mb-2">15:1</h3>
+                                        <p class="text-muted small mb-0">Before BalanceOil</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <i class="fas fa-arrow-right text-primary fs-4"></i>
+                                    </div>
+                                    <div class="text-center">
+                                        <h3 class="text-success mb-2">5:1</h3>
+                                        <p class="text-muted small mb-0">After 120 Days</p>
+                                    </div>
+                                </div>
+                                <div class="border-top pt-4">
+                                    <h5 class="fw-bold mb-3">Customer Story</h5>
+                                    <p class="fst-italic mb-0">"All my life I have made healthy and home-cooked food. I have also used different fish oils. After taking the test and using BalanceOil for 120 days, I'm amazed at the improvement in my results!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- Add the product section where you want it -->
+<div id="product-section"></div>
+        <!-- Step 2: Choose Your Supplement -->
+        <div class="row align-items-center mb-5 flex-lg-row-reverse">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative text-center">
+                    <img src="images/products/omega-3-balance-oil-300 ml.png" alt="BalanceOil+" class="img-fluid product-main">
+                    <img src="images/products/zinzino-balance-oil-tutti-frutti.png" alt="BalanceOil+ Tutti Frutti" class="position-absolute product-secondary top-left">
+                    <img src="images/products/zinzino-essent-premium-fish-oil-pills.png" alt="Essent+ Premium" class="position-absolute product-secondary bottom-right">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="pe-lg-4">
+                    <div class="step-number mb-3">
+                        <span class="badge bg-primary rounded-circle p-3">2</span>
+                    </div>
+                    <h3 class="h2 mb-3">Select Your Perfect Supplement</h3>
+                    <p class="lead mb-4">Choose from our range of premium Omega-3 supplements, each formulated to help you achieve optimal results:</p>
+                    <div class="supplement-options">
+                        <div class="option-card mb-3 p-3 border rounded-3">
+                            <h4 class="h5 mb-2">BalanceOil+</h4>
+                            <p class="mb-0 text-muted">Our flagship liquid formula with polyphenols from olive oil</p>
+                        </div>
+                        <div class="option-card mb-3 p-3 border rounded-3">
+                            <h4 class="h5 mb-2">BalanceOil+ AquaX</h4>
+                            <p class="mb-0 text-muted">Water-mixable formula for those who prefer no oil taste</p>
+                        </div>
+                        <div class="option-card mb-3 p-3 border rounded-3">
+                            <h4 class="h5 mb-2">Vegan BalanceOil+</h4>
+                            <p class="mb-0 text-muted">Plant-based marine algae formula for vegetarians and vegans</p>
+                        </div>
+                        <div class="option-card mb-3 p-3 border rounded-3">
+                            <h4 class="h5 mb-2">Essent+ Premium</h4>
+                            <p class="mb-0 text-muted">Convenient capsule form with the same powerful benefits</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Track Progress -->
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="position-relative">
+                    <img src="images/zinzino-test-13-to-1.jpg" alt="Brand Comparison" class="img-fluid rounded-3 shadow">
+                    <div class="success-stat position-absolute top-0 end-0 bg-success text-white p-4 rounded-3 shadow">
+                        <h4 class="h2 mb-0">91%</h4>
+                        <p class="mb-0">Success Rate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ps-lg-4">
+                    <div class="step-number mb-3">
+                        <span class="badge bg-primary rounded-circle p-3">3</span>
+                    </div>
+                    <h3 class="h2 mb-3">Track Your Transformation</h3>
+                    <p class="lead mb-4">Over 120 days, our supplements work to optimize your Omega-6:3 ratio. Take a follow-up test to see your impressive results.</p>
+                    <div class="results-highlights">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-chart-line text-success me-3"></i>
+                            <span>91% of users achieve optimal 3:1 ratio</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-heart text-success me-3"></i>
+                            <span>Improved cardiovascular health markers</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-brain text-success me-3"></i>
+                            <span>Enhanced cognitive function</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Money Back Guarantee -->
+        <div class="text-center mt-5">
+            <div class="guarantee-badge d-inline-block bg-warning text-dark p-4 rounded-circle mb-3">
+                <i class="fas fa-shield-alt fa-2x"></i>
+            </div>
+            <h3 class="h4 mb-2">100% Satisfaction Guarantee</h3>
+            <p class="text-muted mb-4">If you don't see improvement in your Omega-6:3 ratio, we'll refund your purchase</p>
+            <a href="#products" class="btn btn-primary btn-lg px-5">Start Your Journey Today</a>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Omega3Daily</h5>
+                    <p>Transforming health through scientifically formulated nutrition.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="omega3-supplements.html" class="text-white">Supplements</a></li>
+                        <li><a href="balance-test.html" class="text-white">Balance Test</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: support@omega3daily.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productDetailsModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="product-image-container mb-4">
+                                <img src="" alt="" class="img-fluid rounded product-image">
+                                <div class="badge-container position-absolute top-0 end-0 p-3">
+                                    <span class="badge bg-premium d-none">Premium</span>
+                                    <span class="badge bg-success d-none">Vegan</span>
+                                    <span class="badge bg-info d-none">Most Popular</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-info">
+                                <p class="product-description lead mb-4"></p>
+                                <div class="product-video mb-4 d-none">
+                                    <div class="ratio ratio-16x9">
+                                        <video controls class="rounded w-100 h-100 object-fit-contain" preload="metadata">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                </div>
+                                <div class="pricing mb-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <span class="h2 mb-0 current-price me-3"></span>
+                                        <span class="text-decoration-line-through text-muted original-price"></span>
+                                        <span class="ms-2 badge bg-danger savings-badge"></span>
+                                    </div>
+                                    <div class="credits text-muted"></div>
+                                </div>
+                                <div class="subscription-info mb-4">
+                                    <h6 class="fw-bold">Subscribe & Save</h6>
+                                    <div class="d-flex align-items-center">
+                                        <span class="h4 mb-0 subscription-price me-2"></span>
+                                        <span class="text-muted">/month</span>
+                                    </div>
+                                    <div class="subscription-credits text-muted small"></div>
+                                </div>
+                                <div class="kit-contents mb-4 d-none">
+                                    <h6 class="fw-bold">Kit Contents</h6>
+                                    <div class="first-delivery mb-3">
+                                        <p class="mb-2">First Delivery:</p>
+                                        <ul class="list-unstyled first-delivery-list">
+                                        </ul>
+                                    </div>
+                                    <div class="subscription-delivery">
+                                        <p class="mb-2">Monthly Subscription:</p>
+                                        <ul class="list-unstyled subscription-list">
+                                        </ul>
+                                    </div>
+                                    <p class="kit-note text-muted small mt-2"></p>
+                                </div>
+                                <div class="quantity mb-4">
+                                    <label class="form-label">Quantity</label>
+                                    <div class="input-group" style="width: 140px;">
+                                        <button class="btn btn-outline-secondary quantity-decrease" type="button">-</button>
+                                        <input type="number" class="form-control text-center quantity-input" value="1" min="1" max="10">
+                                        <button class="btn btn-outline-secondary quantity-increase" type="button">+</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary btn-lg w-100 add-to-cart-btn">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <template id="product-template">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="product-card h-100 p-3 rounded">
+                <div class="position-relative">
+                    <img src="" alt="" class="product-image img-fluid mb-3">
+                    <div class="badge-container position-absolute top-0 end-0 p-2">
+                        <span class="badge bg-primary me-1" style="display: none;">Premium</span>
+                        <span class="badge bg-success me-1" style="display: none;">Vegan</span>
+                        <span class="badge bg-warning" style="display: none;">Most Popular</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h5 class="product-title mb-2"></h5>
+                    <p class="product-description small text-muted mb-3"></p>
+                    <div class="price-container mb-2">
+                        <span class="original-price text-muted text-decoration-line-through me-2"></span>
+                        <span class="price h5 mb-0 me-2"></span>
+                        <span class="savings-badge badge bg-danger"></span>
+                    </div>
+                    <div class="credits text-muted small mb-3"></div>
+                    <div class="kit-contents bg-light p-3 rounded mb-3">
+                        <h6 class="mb-2">Kit Content</h6>
+                        <div class="first-delivery mb-2">
+                            <strong class="d-block mb-2">First Delivery</strong>
+                        </div>
+                        <div class="subscription-delivery">
+                            <strong class="d-block mb-2">Subscription</strong>
+                        </div>
+                    </div>
+                    <div class="subscription-info bg-light p-3 rounded mb-3">
+                        <h6 class="fw-bold">Subscribe & Save</h6>
+                        <div class="monthly-product mb-2"></div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>Monthly fee: 
+                                <span class="original-fee text-muted text-decoration-line-through me-1"></span>
+                                <span class="fee"></span>
+                            </div>
+                            <span class="monthly-credits text-muted small"></span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100 add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- Product Section JS -->
+    <script src="assets/js/product-section.js"></script>
+    
+    <!-- Initialize Products -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!-- Product Section Template -->
+<section class="products-section py-5">
+    <div class="container">
+        <div class="row g-4" id="product-container">
+            <!-- Product Template -->
+            <template id="product-template">
+                <div class="col-md-6 col-lg-4">
+                    <div class="product-card h-100">
+                        <div class="product-image">
+                            <img src="" alt="" class="img-fluid">
+                            <div class="product-badges">
+                                <span class="badge bg-primary vegan-badge d-none">Vegan</span>
+                                <span class="badge bg-success premium-badge d-none">Premium</span>
+                            </div>
+                        </div>
+                        <div class="product-info p-4">
+                            <h3 class="product-title h5 mb-2"></h3>
+                            <p class="product-description text-muted mb-3"></p>
+                            <div class="product-meta mb-3">
+                                <span class="volume me-3"></span>
+                                <span class="variant"></span>
+                            </div>
+                            <div class="product-pricing">
+                                <div class="retail-price mb-1">
+                                    <span class="label">Retail:</span>
+                                    <span class="amount"></span>
+                                </div>
+                                <div class="premier-price mb-3">
+                                    <span class="label">Premier:</span>
+                                    <span class="amount"></span>
+                                </div>
+                                <div class="credits small text-muted">
+                                    <i class="fas fa-star"></i>
+                                    <span></span> Credits
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-footer p-4 pt-0">
+                            <button class="btn btn-primary w-100" onclick="addToCart(this)" data-product-id="">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</section>
+
+<style>
+.product-card {
+    border-radius: 1rem;
+    border: 1px solid #e9ecef;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: white;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    position: relative;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-badges {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product-info {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.product-title {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.product-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.product-pricing .label {
+    color: #6c757d;
+    width: 80px;
+    display: inline-block;
+}
+
+.product-pricing .amount {
+    font-weight: 600;
+    color: #212529;
+}
+
+.premier-price .amount {
+    color: #28a745;
+}
+
+.credits i {
+    color: #ffc107;
+    margin-right: 0.25rem;
+}
+</style>
+
+<script>
+function loadProducts() {
+    fetch('/api/products')
+        .then(response => response.json())
+        .then(products => {
+            const container = document.getElementById('product-container');
+            const template = document.getElementById('product-template');
+            
+            products.forEach(product => {
+                const clone = template.content.cloneNode(true);
+                
+                // Set product data
+                const img = clone.querySelector('img');
+                img.src = `/assets/images/products/${product.image}`;
+                img.alt = product.name;
+                
+                clone.querySelector('.product-title').textContent = product.name;
+                clone.querySelector('.product-description').textContent = product.description;
+                clone.querySelector('.volume').textContent = product.volume;
+                clone.querySelector('.variant').textContent = product.variant;
+                
+                // Pricing
+                clone.querySelector('.retail-price .amount').textContent = `$${product.retail_price}`;
+                clone.querySelector('.premier-price .amount').textContent = `$${product.premier_price}`;
+                clone.querySelector('.credits span').textContent = product.credits_required;
+                
+                // Badges
+                if (product.is_vegan) {
+                    clone.querySelector('.vegan-badge').classList.remove('d-none');
+                }
+                if (product.is_premium) {
+                    clone.querySelector('.premium-badge').classList.remove('d-none');
+                }
+                
+                // Add to cart button
+                clone.querySelector('button').dataset.productId = product.id;
+                
+                container.appendChild(clone);
+            });
+        });
+}
+
+function addToCart(button) {
+    const productId = button.dataset.productId;
+    // Implement cart functionality
+    console.log(`Adding product ${productId} to cart`);
+}
+
+// Load products when the document is ready
+document.addEventListener('DOMContentLoaded', loadProducts);
+</script>
